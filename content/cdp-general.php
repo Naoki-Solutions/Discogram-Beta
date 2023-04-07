@@ -88,7 +88,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             ws.onerror = ws.onopen = ws.onclose = null;
             ws.close();
         }
-        ws = new WebSocket('ws://70.45.163.5aasd2:5200');
+        ws = new WebSocket('ws://70.45.163.52:5200');
         ws.onopen = () => {
             console.log('Connection opened!');
         }
