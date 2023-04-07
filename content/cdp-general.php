@@ -79,7 +79,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     const messageBox = document.querySelector('#messageBox');
     let ws;
     function showMessage(message) {
-        messages.textContent += `\n\n${username}:\n\n\n ${message}`; 
+        messages.textContent += `${username}:\n\n\n ${message}`; 
         messages.scrollTop = messages.scrollHeight;
         messageBox.value = '';
     }
