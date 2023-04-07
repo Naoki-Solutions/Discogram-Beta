@@ -68,6 +68,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class="column-3">
             <div class="display-messages"></div>
             <input style="position:absolute;top:50px;" type="text" id="messageBox" placeholder="Enviar un mensaje a #general" required>
+            <button id="send"></button>
         </div>
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
@@ -113,6 +114,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     });
     init();
 })();
+</script>
+<script>
+    var username = '<?php echo htmlspecialchars($_SESSION["username"]); ?>'
 </script>
 </body>
 
