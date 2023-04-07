@@ -66,8 +66,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
 
         <div class="column-3">
-            <div class="display-messages"></div>
-            <input style="position:absolute;top:50px;" type="text" id="messageBox" placeholder="Enviar un mensaje a #general" required>
+            <div class="display-messages" id="messages"></div>
+            <input type="text" id="messageBox" placeholder="Enviar un mensaje a #general" required>
             <button id="send"></button>
         </div>
     <script src="../version.js"></script>
@@ -79,7 +79,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     const messageBox = document.querySelector('#messageBox');
     let ws;
     function showMessage(message) {
-        messages.textContent += `\n\n${message}`;
+        messages.textContent += `\n\n${username}:\n\n\n ${message}`; 
         messages.scrollTop = messages.scrollHeight;
         messageBox.value = '';
     }

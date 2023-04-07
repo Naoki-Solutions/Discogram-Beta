@@ -362,13 +362,26 @@ a {
 .display-messages {
     border-radius: 5px;
     border: 1px solid #191b20;
-    background-color: #21252b;
+    background-color: #282c34;
     position: absolute;
     width: 65rem;
-    height: 20rem;
-    left: 20px;
+    height: 39rem;
+    left: 0px;
     top: 20px;
     padding: 1px;
     font-family: monospace;
     color: #848688;
+}
+
+#messageBox {
+    font-size: 17px;
+    position: absolute;
+    top: 33rem;
+    left: 10px;
+    width:40rem;height:3rem;background-color:#353943;border-radius:5px;border:solid #353943 1px;color:gray;
+}
+
+#messageBox::placeholder {
+    font-size: 15px;
+    padding-left: 10px;
 }
