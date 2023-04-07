@@ -55,7 +55,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="line"></div>
             <div class="channels">
             <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i> Social</h4>
-            <a href="./cdp-general.php"><h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-hashtag"></i> General</h4></a>
+            <h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-hashtag"></i> General</h4>
             <h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-image"></i> Memes</h4>
             <h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-volume-high"></i> Audio</h4>
             <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i> NeticsSH</h4>
@@ -66,10 +66,54 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
 
         <div class="column-3">
-            <h2 style="padding-left:15px;padding-top:10px;">adass</h2>
+            <div class="display-messages"></div>
+            <input style="position:absolute;top:50px;" type="text" id="messageBox" placeholder="Enviar un mensaje a #general" required>
         </div>
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
+    <script>
+(function () {
+    const sendBtn = document.querySelector('#send');
+    const messages = document.querySelector('#messages');
+    const messageBox = document.querySelector('#messageBox');
+    let ws;
+    function showMessage(message) {
+        messages.textContent += `\n\n${message}`;
+        messages.scrollTop = messages.scrollHeight;
+        messageBox.value = '';
+    }
+    function init() {
+        if (ws) {
+            ws.onerror = ws.onopen = ws.onclose = null;
+            ws.close();
+        }
+        ws = new WebSocket('ws://70.45.163.5aasd2:5200');
+        ws.onopen = () => {
+            console.log('Connection opened!');
+        }
+        ws.onmessage = ({ data }) => showMessage(data);
+        ws.onclose = function () {
+            ws = null;
+        }
+    }
+    sendBtn.onclick = function () {
+        if (!ws) {
+            showMessage("No WebSocket connection :(");
+            return;
+        }
+        ws.send(messageBox.value);
+        showMessage(messageBox.value);
+    }
+    var input = document.getElementById("messageBox");
+    input.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            ws.send(messageBox.value);
+            showMessage(messageBox.value);
+        }
+    });
+    init();
+})();
+</script>
 </body>
 
 </html>
