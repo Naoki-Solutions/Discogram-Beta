@@ -1,9 +1,9 @@
 <?php
 // Initialize the session
 session_start();
- 
+
 // Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
     exit;
 }
@@ -57,7 +57,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <h4 style="top:10rem"><i class="fa-solid fa-book"></i> Recursos</h4>
         </div>
         <div class="column-3">
-        <h2 style="padding-left:15px;padding-top:10px;">Oh oh, no hay nada aqui.</h2>
+
+        <div class="card">
+            <img id="banner" src="./assets/images/breadbanner.jpg">
+            <div class="square"><img id="imgbread" src="./assets/images/bread2.png"></div>
+            <img id="verified-img-card" src="./assets/images/verified.png">
+            <h4 id="card-text-id">El Culto del Pan</h4>
+            <p id="card-p-id">En este grupo alabamos el pan,<br>¿Porque? ¯\_(ツ)_/¯</p>
+            <span id="span-members"><img id="gray-dot-img" src="./assets/images/gray-dot.png"> 0 miembros</span>
+        </div>
+
         </div>
     <script src="version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>

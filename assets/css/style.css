@@ -157,7 +157,7 @@ body {
     padding-left: 10px;
 }
 
-.channels h4{
+.channels h4 {
     position: inherit;
     font-size: 15px;
     font-family: sans-serif;
@@ -287,4 +287,70 @@ h6 {
     padding: 1px;
     position: absolute;
     background-color: rgb(190, 7, 7);
+}
+
+.card {
+    border-radius: 5px;
+    background-color: #21252b;
+    position: absolute;
+    width: 17rem;
+    height: 18rem;
+    left: 20px;
+    top: 20px;
+    padding: 1px;
+    font-family: monospace;
+    color: #848688;
+}
+
+.square {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 7rem;
+    padding: 1px;
+    left: 10px;
+    background-color: #21252b;
+    border-radius: 8px;
+}
+
+#banner {
+    width: 17rem;
+}
+
+#imgbread {
+    width: 30px;
+    position: absolute;
+    left: 5px;
+}
+
+#card-text-id {
+    position: absolute;
+    left: 27px;
+    top: 8.5rem;
+}
+
+#card-p-id {
+    position: absolute;
+    left: 10px;
+    top: 10.5rem;
+    font-size: 15px;
+}
+
+#verified-img-card {
+    width: 20px;
+    left: 5px;
+    top: 9.7rem;
+    position: absolute;
+}
+
+#span-members {
+    position: absolute;
+    left: 10px;
+    top: 15.8rem;
+    font-size: 15px;
+    font-family: sans-serif;    
+}
+
+#gray-dot-img {
+    width: 10px;
 }
