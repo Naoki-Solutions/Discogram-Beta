@@ -1,0 +1,290 @@
+body p {
+    font-family: sans-serif;
+    font-size: 17px;
+    color: #848688;
+}
+
+a {
+    font-family: sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.column {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 55px;
+    height: 60rem;
+    background-color: #1c2025;
+}
+
+.column-2 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 55px;
+    top: 50px;
+    width: 220px;
+    height: 60rem;
+    background-color: #21252b;
+}
+
+.column-2-2 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 55px;
+    top: 50px;
+    width: 220px;
+    height: 60rem;
+    background-color: #21252b;
+}
+
+.column-3 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 17rem;
+    top: 50px;
+    width: 120rem;
+    height: 60rem;
+    background-color: #282c34;
+}
+
+.column-vertical {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200rem;
+    height: 4rem;
+    background-color: #1c2025;
+}
+
+.column-vertical a {
+    text-decoration: none;
+}
+
+#icons {
+    position: absolute;
+    color: #848688;
+    font-size: 23px;
+    padding: 2px;
+}
+
+.circle {
+    position: absolute;
+    top: 19rem;
+    left: 5px;
+    border-radius: 40px;
+    padding: 10px;
+    background-color: #282c34;
+    width: 20px;
+    height: 20px;
+}
+
+.circle-conf {
+    position: absolute;
+    top: 16rem;
+    left: 5px;
+    border-radius: 40px;
+    padding: 10px;
+    background-color: #282c34;
+    width: 20px;
+    height: 20px;
+}
+
+.circle-2 {
+    position: absolute;
+    top: 8.5rem;
+    left: 5px;
+    border-radius: 40px;
+    padding: 10px;
+    background-color: #282c34;
+    width: 20px;
+    height: 20px;
+}
+
+.circle-3 {
+    position: absolute;
+    top: 11.5rem;
+    left: 5px;
+    border-radius: 40px;
+    padding: 10px;
+    background-color: #282c34;
+    width: 20px;
+    height: 20px;
+}
+
+#images {
+    position: absolute;
+    width: 30px;
+}
+
+.column-vertical input {
+    padding: 5px;
+    position: absolute;
+    background-color: #21252b;
+    border: solid #21252b;
+    left: 4rem;
+    top: 10px;
+    color: #848688;
+}
+
+.column-2 h4 {
+    font-size: 15px;
+    position: absolute;
+    font-family: sans-serif;
+    color: #848688;
+}
+
+.column-2-2 h4 {
+    font-size: 15px;
+    position: absolute;
+    left: 20px;
+    font-family: sans-serif;
+    color: #848688;
+}
+
+.channels {
+    margin: 0;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+.channels h4{
+    position: inherit;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: #848688;
+}
+
+.column-2 h3 {
+    font-size: 17px;
+    position: absolute;
+    left: 10px;
+    font-family: sans-serif;
+    color: #848688;
+}
+
+.column-2-2 h3 {
+    font-size: 17px;
+    position: absolute;
+    left: 10px;
+    font-family: sans-serif;
+    color: #848688;
+}
+
+.line {
+    position: absolute;
+    width: 15rem;
+    top: 2.5rem;
+    left: 0px;
+    padding: 1px;
+    background-color: #2e3237;
+}
+
+.line-2 {
+    position: absolute;
+    width: 15rem;
+    top: 3rem;
+    left: 0px;
+    padding: 1px;
+    background-color: #2e3237;
+}
+
+.pixeles {
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 1px;
+    position: absolute;
+    background-color: #21252b;
+    border: solid #21252b;
+    left: 31rem;
+    top: 12px;
+    color: #848688;
+}
+
+.some-div {
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 2px;
+    position: absolute;
+    background-color: #21252b;
+    border: solid #21252b;
+    left: 17rem;
+    top: 12px;
+    color: #848688;
+}
+
+.version {
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 2px;
+    position: absolute;
+    background-color: #21252b;
+    border: solid #21252b;
+    left: 27.5rem;
+    top: 12px;
+    color: #848688;
+}
+
+.location {
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 2px;
+    position: absolute;
+    background-color: #21252b;
+    border: solid #21252b;
+    top: 12px;
+    color: #848688;
+}
+
+.column-3 h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: sans-serif;
+    color: #848688;
+}
+
+.btn-debug {
+    border: solid #218ddc;
+    border-radius: 5px;
+    padding: 1px;
+    position: absolute;
+    background-color: #218ddc;
+}
+
+.btn-debug:hover {
+    cursor: pointer;
+    border: solid #1e6aa1;
+    border-radius: 5px;
+    padding: 1px;
+    position: absolute;
+    background-color: #1e6aa1;
+}
+
+.btn-logout {
+    border: solid red;
+    border-radius: 5px;
+    padding: 1px;
+    position: absolute;
+    background-color: red;
+}
+
+.btn-logout:hover {
+    cursor: pointer;
+    border: solid rgb(190, 7, 7);
+    border-radius: 5px;
+    padding: 1px;
+    position: absolute;
+    background-color: rgb(190, 7, 7);
+}

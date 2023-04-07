@@ -1,0 +1,46 @@
+.debug {
+    border-radius: 5px;
+    border: 1px solid #191b20;
+    background-color: #21252b;
+    position: absolute;
+    width: 65rem;
+    height: 20rem;
+    left: 20px;
+    top: 20px;
+    padding: 1px;
+    font-family: monospace;
+    color: #848688;
+}
+
+.debug p {
+    position: absolute;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+
+
+
+.line-debug {
+    background-color: #1b1d23;
+    position: absolute;
+    width: 1px;
+    height: 15rem;
+    left: 20rem;
+    top: 10px;
+    padding: 1px;
+    font-family: monospace;
+    color: #848688;
+}
+
+.line-debug-2 {
+    background-color: #1b1d23;
+    position: absolute;
+    width: 1px;
+    height: 15rem;
+    left: 40rem;
+    top: 10px;
+    padding: 1px;
+    font-family: monospace;
+    color: #848688;
+}
