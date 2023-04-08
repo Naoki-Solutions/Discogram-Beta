@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
     echo "<p><strong>" . htmlspecialchars($row["author"]) . ":</strong> " . htmlspecialchars($row["message"]) . "</p>";
   }
 } else {
-  echo "No messages found";
+  echo "<p>No messages found</p>";
 }
 
 echo '</div>';
