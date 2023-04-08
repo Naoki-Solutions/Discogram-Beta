@@ -62,7 +62,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <h4 style="padding-left:11px;font-weight:200">📢 Announcements</h4>
             <h4 style="padding-left:11px;font-weight:200">💡 Suggestions</h4>
             <h4 style="padding-left:11px;font-weight:200">🪲 Bug report</h4>
-            <h4 style="padding-left:11px;font-weight:200"><i style="padding-left:3px" class="fa-brands fa-github"></i> Github</h4>
+            <a href="https://github.com/Naoki-Solutions"><h4 style="padding-left:11px;font-weight:200"><i style="padding-left:3px" class="fa-brands fa-github"></i> Github</h4></a>
             <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i> Etc</h4>
             <a href="./cdp-console.php"><h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-terminal"></i> Console</h4></a>
         </div>
