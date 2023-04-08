@@ -404,6 +404,19 @@ a {
     color: #848688;
 }
 
+.display-msg::-webkit-scrollbar {
+    width: 6px; /* Grosor del scrollbar */
+  }
+  
+  .display-msg::-webkit-scrollbar-track {
+    background-color: #2c2f33; /* Color de fondo del track */
+  }
+  
+  .display-msg::-webkit-scrollbar-thumb {
+    background-color: #7289da; /* Color del thumb */
+    border-radius: 5px; /* Radio de borde del thumb */
+  }
+
 .display-msg p {
     padding-left: 60px;
 }

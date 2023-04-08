@@ -90,7 +90,7 @@ if ($_SESSION["username"] !== "keyder") {
             <h3 style="margin:0;">El Culto del Pan</h3>
             <p style="margin:0;">Al hacer click en el boton, todos los mensajes en la base<br>de datos del grupo "El Culto del Pan" seran eliminados.</p>
             <br>
-            <a href="../assets/php/db-reset-cdp.php"><button class="btn-db">Reiniciar DB / CDP</button></a>
+            <a href="../assets/php/db-reset-cdp.php"><button class="btn-db">Reiniciar DB</button></a>
 </div>
         </div>
     <script src="../version.js"></script>

@@ -103,7 +103,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </form>
         <div id="preview"></div>
     </div>
-    <div class="column-4"></div>
+    <div class="column-4">
+        <h3 style="padding-left:40px">Reglas del Chat</h3>
+    </div>
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
     <script src="../version.js"></script>
