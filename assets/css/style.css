@@ -390,7 +390,7 @@ a {
     border-color: white;
     background-color: #282c34;
     position: absolute;
-    width: 70rem;
+    width: 56rem;
     height: 33rem;
     left: 0px;
     top: 20px;
@@ -401,4 +401,15 @@ a {
 
 .display-msg p {
     padding-left: 10px;
+}
+
+.column-4 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 73rem;
+    top: 50px;
+    width: 20rem;
+    height: 45rem;
+    background-color: #21252b;  
 }
