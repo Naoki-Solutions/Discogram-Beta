@@ -56,7 +56,7 @@ body {
     background-color: #282c34;
 }
 
-/* .column-vertical {
+.column-vertical {
     margin: 0;
     position: absolute;
     top: 0;
@@ -64,7 +64,7 @@ body {
     width: 200rem;
     height: 4rem;
     background-color: #1c2025;
-} */
+}
 
 .column-vertical a {
     text-decoration: none;
