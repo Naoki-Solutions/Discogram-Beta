@@ -85,10 +85,6 @@ if ($_SESSION["username"] !== "keyder") {
                 <p style="left:42rem;top:160px"><span>ws://70.45.163.52:5200</span></p>
                 <p style="left:42rem;top:180px"><span>ws://70.45.163.52:5201</span></p>
             </div>
-        <div class="coso">
-            <h2>Bases de Datos</h2>
-            <p>asdasd</p>
-        </div>
         </div>
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
