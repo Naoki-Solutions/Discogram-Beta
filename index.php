@@ -38,7 +38,7 @@
             <p>De momento, esta app solo se encuentra disponible para beta-testers.</p>
         </div>
         <br>
-        <a href="login.php"><button class="button">Iniciar Sesion</button></a>
+        <a href="login.php"><button style="cursor:pointer" class="button">Iniciar Sesion</button></a>
     </main>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
 </body>
