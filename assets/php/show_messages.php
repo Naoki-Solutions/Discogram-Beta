@@ -31,12 +31,10 @@ if ($result->num_rows > 0) {
         break;
     }
     $message = htmlspecialchars($row["message"]);
-    if (preg_match('/^\*\*(.*)\*\*$/', $message, $matches)) {
-        $message = '<b>' . $matches[1] . '</b>';
-    }
-    if (preg_match('/^`(.*)`$/', $message, $matches)) {
-        $message = '<span style="background-color: #242526; color:$color;">' . $matches[1] . '</span>';
-    }
+    // Reemplazar cualquier texto entre asteriscos con una etiqueta de negrita
+    $message = preg_replace('/\*(.*?)\*/', '<b>$1</b>', $message);
+    // Reemplazar cualquier texto entre comillas invertidas con una etiqueta de fondo oscuro
+    $message = preg_replace('/`(.*?)`/', '<span style="background-color: #242526; color: $color;">$1</span>', $message);
     echo "<p><strong><img id=\"noimg\" src=\"../assets/images/noimg.png\">" . htmlspecialchars($row["author"]). ":<br></strong><span style=\"color:$color;\"> " . $message . "</span></p>";
   }
 } else {
@@ -47,5 +45,6 @@ echo '</label>';
 echo '</div>';
 echo "<script>var elem = document.getElementById('display-msg'); elem.scrollTop = elem.scrollHeight;</script>";
 $conn->close();
+
 
 ?>
