@@ -24,15 +24,33 @@ body {
 }
 
 .column-2 {
+    overflow: hidden;
     margin: 0;
     padding: 0;
     position: absolute;
     left: 55px;
     top: 50px;
     width: 220px;
-    height: 60rem;
+    height: 40rem;
     background-color: #21252b;
 }
+
+.column-2:hover {
+    overflow-y: scroll;
+}
+
+.column-2::-webkit-scrollbar {
+    width: 6px; /* Grosor del scrollbar */
+  }
+  
+  .column-2::-webkit-scrollbar-track {
+    background-color: #2c2f33; /* Color de fondo del track */
+  }
+  
+  .column-2::-webkit-scrollbar-thumb {
+    background-color: #7289da; /* Color del thumb */
+    border-radius: 5px; /* Radio de borde del thumb */
+  }
 
 .column-2-2 {
     margin: 0;
@@ -459,4 +477,14 @@ a {
     background-color: #1e6aa1;
     top: 40rem;
     left: 20px
+}
+
+.fill-line {
+    background-color: #21252b;
+    padding: 10px;
+    position: absolute;
+    left: 55px;
+    top: 43rem;
+    width: 13rem;
+    height: 14rem;
 }

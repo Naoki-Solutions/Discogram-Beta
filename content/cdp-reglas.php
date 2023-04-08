@@ -71,7 +71,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
         <div class="fill-line"></div>
         <div class="column-3">
-            <h2 style="padding-left:15px;padding-top:10px;">adass</h2>
+            <h2 style="padding-left:15px;padding-top:25px;margin:0">Reglas del Grupo</h2>
+            <p style="padding-left:15px;margin:0;">Aqui podras encontrar las reglas del grupo "El Culto del Pan"</p>
+            <p style="padding-left:15px;margin:0;">Estas reglas van sujeto a los Terminos y Condiciones de Discogram.</p>
+            <h3 style="padding-left:15px;padding-top:25px;margin:0">Normativas del Chat</h3>
+            <p style="padding-left:15px;">- Prohibido el spam<br>- Prohibido hablar de temas sexuales, politicos o gore.<br>- Prohiba la discriminacion<br>- No causar drama innecesariamente<br>- No hablar o mandar cosas ilegales<br>- No compartir informacion privada</p>
         </div>
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
@@ -83,4 +87,4 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <!--            <label class="switch">
   <input type="checkbox">
   <span class="slider round"></span>
-</label>-->
+</label>-->s

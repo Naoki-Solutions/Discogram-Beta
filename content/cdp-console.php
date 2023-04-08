@@ -54,6 +54,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <h4 style="top:10px;left:20px;margin:0">🍞 El Culto del Pan <i class="fa-solid fa-chevron-down"></i></h4>
             <div class="line"></div>
             <div class="channels">
+            <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i> Importante</h4>
+            <a href="./cdp-reglas.php"><h4 style="padding-left:11px;font-weight:200">📃 Reglas</h4></a>
             <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i> Social</h4>
             <a href="./cdp-general.php"><h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-hashtag"></i> General</h4></a>
             <h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-image"></i> Memes</h4>
@@ -67,7 +69,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <a href="./cdp-console.php"><h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-terminal"></i> Console</h4></a>
         </div>
         </div>
-
+        <div class="fill-line"></div>
         <div class="column-3">
             <div class="display-messages" id="messages"></div>
             <input type="text" id="messageBox" placeholder="Enviar un mensaje a #general" required>

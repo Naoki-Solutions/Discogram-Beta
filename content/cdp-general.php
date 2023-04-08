@@ -72,8 +72,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <h4 style="top:10px;left:20px;margin:0">🍞 El Culto del Pan <i class="fa-solid fa-chevron-down"></i></h4>
         <div class="line"></div>
         <div class="channels">
-            <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i>
-                Social</h4>
+            <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i> Importante</h4>
+            <a href="./cdp-reglas.php"><h4 style="padding-left:11px;font-weight:200">📃 Reglas</h4></a>
+            <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i> Social</h4>
             <a href="./cdp-general.php">
                 <h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-hashtag"></i> General</h4>
             </a>
@@ -85,12 +86,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <h4 style="padding-left:11px;font-weight:200">💡 Suggestions</h4>
             <h4 style="padding-left:11px;font-weight:200">🪲 Bug report</h4>
             <a href="https://github.com/Naoki-Solutions"><h4 style="padding-left:11px;font-weight:200"><i style="padding-left:3px" class="fa-brands fa-github"></i> Github</h4></a>
-            <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i>Etc</h4>
+            <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i> Etc</h4>
             <a href="./cdp-console.php">
                 <h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-terminal"></i> Console</h4>
             </a>
         </div>
     </div>
+    <div class="fill-line"></div>
     <div class="column-3">
         <!-- <div class="display-messages" id="messages"></div>
         <input type="text" id="messageBox" placeholder="Enviar un mensaje a #general" required>
@@ -105,6 +107,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </div>
     <div class="column-4">
         <h3 style="padding-left:40px">Reglas del Chat</h3>
+        <p style="padding-left:20px">- No cometarios racistas<br>- No temas politicos<br>- No temas sexuales<br>- No Spam</p>
     </div>
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
