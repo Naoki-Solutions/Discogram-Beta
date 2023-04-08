@@ -85,6 +85,13 @@ if ($_SESSION["username"] !== "keyder") {
                 <p style="left:42rem;top:160px"><span>ws://70.45.163.52:5200</span></p>
                 <p style="left:42rem;top:180px"><span>ws://70.45.163.52:5201</span></p>
             </div>
+            <div class="abajo">
+            <h2>Bases de Datos</h2>
+            <h3 style="margin:0;">El Culto del Pan</h3>
+            <p style="margin:0;">Al hacer click en el boton, todos los mensajes en la base<br>de datos del grupo "El Culto del Pan" seran eliminados.</p>
+            <br>
+            <a href="../assets/php/db-reset-cdp.php"><button class="btn-db">Reiniciar DB / CDP</button></a>
+</div>
         </div>
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>

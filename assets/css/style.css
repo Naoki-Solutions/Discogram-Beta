@@ -348,7 +348,7 @@ h6 {
     left: 10px;
     top: 15.8rem;
     font-size: 15px;
-    font-family: sans-serif;    
+    font-family: sans-serif;
 }
 
 #gray-dot-img {
@@ -364,7 +364,12 @@ a {
     position: absolute;
     top: 130px;
     right: -38rem;
-    width:40rem;height:3rem;background-color:#353943;border-radius:5px;border:solid #353943 1px;color:gray;
+    width: 40rem;
+    height: 3rem;
+    background-color: #353943;
+    border-radius: 5px;
+    border: solid #353943 1px;
+    color: gray;
 }
 
 #message::placeholder {
@@ -411,10 +416,34 @@ a {
     top: 50px;
     width: 20rem;
     height: 45rem;
-    background-color: #21252b;  
+    background-color: #21252b;
 }
 
 #github {
     margin: 0;
     width: 22px;
+}
+
+.abajo {
+    position: absolute;
+    top: 23rem;
+    left: 20px;
+}
+
+.btn-db {
+    border: solid #218ddc;
+    border-radius: 5px;
+    padding: 1px;
+    background-color: #218ddc;
+    top: 40rem;
+    left: 20px
+}
+
+.btn-db:hover {
+    border: solid #1e6aa1;
+    border-radius: 5px;
+    padding: 1px;
+    background-color: #1e6aa1;
+    top: 40rem;
+    left: 20px
 }

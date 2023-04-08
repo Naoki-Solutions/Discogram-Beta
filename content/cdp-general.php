@@ -101,15 +101,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <form action="../assets/php/submit_message.php" method="post">
             <input type="text" id="message" name="message" placeholder="Enviar un mensaje a #General" required />
         </form>
+        <div id="preview"></div>
     </div>
     <div class="column-4"></div>
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
     <script src="../version.js"></script>
     <script src="../assets/javascript/websocket.js"></script>
-<script>
-  document.getElementById("message").focus();
-</script>
 </body>
-
 </html>
