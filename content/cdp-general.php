@@ -84,12 +84,12 @@ include '../assets/php/show_messages.php';
         <input type="text" id="messageBox" placeholder="Enviar un mensaje a #general" required>
         <button id="send"></button> -->
 
-<div class="controls">
+<!-- <div class="controls">
 <form action="../assets/php/submit_message.php" method="post">
   <textarea id="message" name="message"></textarea>
   <button id="submit" type="submit">Send Message</button>
 </form>
-    </div>
+    </div> -->
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
     <script src="../version.js"></script>
