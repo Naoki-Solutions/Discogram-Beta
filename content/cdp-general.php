@@ -18,6 +18,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/switches.css">
+    <link rel="stylesheet" href="../assets/css/image.css">
     <title>Discogram Beta</title>
 </head>
 <style>
@@ -83,8 +84,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <h4 style="padding-left:11px;font-weight:200">📢 Announcements</h4>
             <h4 style="padding-left:11px;font-weight:200">💡 Suggestions</h4>
             <h4 style="padding-left:11px;font-weight:200">🪲 Bug report</h4>
-            <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i>
-                Etc</h4>
+            <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i>Etc</h4>
             <a href="./cdp-console.php">
                 <h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-terminal"></i> Console</h4>
             </a>

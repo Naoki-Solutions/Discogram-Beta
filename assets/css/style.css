@@ -413,3 +413,8 @@ a {
     height: 45rem;
     background-color: #21252b;  
 }
+
+#github {
+    margin: 0;
+    width: 22px;
+}

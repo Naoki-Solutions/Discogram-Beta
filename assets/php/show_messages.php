@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
 	$color = "#848688";
 	break;
 }
-    echo "<p><strong>" . htmlspecialchars($row["author"]). ":<br></strong><span style=\"color:$color;\"> " . htmlspecialchars($row["message"]) . "</span></p>";
+    echo "<p><strong><img id=\"noimg\" src=\"../assets/images/noimg.png\">" . htmlspecialchars($row["author"]). ":<br></strong><span style=\"color:$color;\"> " . htmlspecialchars($row["message"]) . "</span></p>";
   }
 } else {
   echo "<p>No messages found</p>";
