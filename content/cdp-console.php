@@ -68,16 +68,32 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
 
         <div class="column-3">
-            <h2 style="padding-left:15px;padding-top:10px;">adass</h2>
+            <div class="display-messages" id="messages"></div>
+            <input type="text" id="messageBox" placeholder="Enviar un mensaje a #general" required>
+            <button id="send"></button>
         </div>
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
-</body>
+    <script src="../assets/javascript/ws-console.js"></script>
 
+<script>
+    var username = '<?php echo htmlspecialchars($_SESSION["username"]); ?>'
+</script>
+
+<script>
+document.getElementById("messageBox").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    var contenido = document.getElementById("messageBox").value;
+    if (contenido === "test") {
+        console.log('holaaa')
+    } else if (contenido === "valor2") {
+      miFuncion2();
+    }
+  }
+});
+
+</script>
+
+</body>
 </html>
 
-<!--        <div class="column-vertical"></div>-->
-<!--            <label class="switch">
-  <input type="checkbox">
-  <span class="slider round"></span>
-</label>-->

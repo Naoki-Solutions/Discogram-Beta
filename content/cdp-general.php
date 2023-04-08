@@ -55,13 +55,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="line"></div>
             <div class="channels">
             <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i> Social</h4>
-            <h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-hashtag"></i> General</h4>
+            <a href="./cdp-general.php"><h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-hashtag"></i> General</h4></a>
             <h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-image"></i> Memes</h4>
             <h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-volume-high"></i> Audio</h4>
             <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i> NeticsSH</h4>
             <h4 style="padding-left:11px;font-weight:200">📢 Announcements</h4>
             <h4 style="padding-left:11px;font-weight:200">💡 Suggestions</h4>
             <h4 style="padding-left:11px;font-weight:200">🪲 Bug report</h4>
+            <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i> Etc</h4>
+            <a href="./cdp-console.php"><h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-terminal"></i> Console</h4></a>
         </div>
         </div>
 
