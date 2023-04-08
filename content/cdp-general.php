@@ -7,6 +7,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: ../login.php");
     exit;
 }
+
+include '../assets/php/show_messages.php';
 ?>
 
 <!DOCTYPE html>
@@ -78,10 +80,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
         </div>
 
-        <div class="column-3">
-        <div class="display-messages" id="messages"></div>
+        <!-- <div class="display-messages" id="messages"></div>
         <input type="text" id="messageBox" placeholder="Enviar un mensaje a #general" required>
-        <button id="send"></button>
+        <button id="send"></button> -->
+
+<div class="controls">
+<form action="../assets/php/submit_message.php" method="post">
+  <textarea id="message" name="message"></textarea>
+  <button id="submit" type="submit">Send Message</button>
+</form>
     </div>
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
