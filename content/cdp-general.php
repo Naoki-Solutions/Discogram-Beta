@@ -20,7 +20,18 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <link rel="stylesheet" href="../assets/css/switches.css">
     <title>Discogram Beta</title>
 </head>
+<style>
+        .message-item {
+            margin-bottom: 16px; /* Ajusta el valor segÃºn la cantidad de espacio que deseas entre mensajes */
+            padding-left: 25px;
+        }
 
+        .message-item span {
+            position: absolute;
+            left: 85px;
+            font-size: 13px;
+        }
+    </style>
 <body>
         <div class="column-vertical">
             <img style="width:50px;" src="../assets/images/logo.png"> 
@@ -68,16 +79,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
 
         <div class="column-3">
-            <div class="display-messages" id="messages"></div>
-            <input type="text" id="messageBox" placeholder="Enviar un mensaje a #general" required>
-            <button id="send"></button>
-        </div>
+        <div class="display-messages" id="messages"></div>
+        <input type="text" id="messageBox" placeholder="Enviar un mensaje a #general" required>
+        <button id="send"></button>
+    </div>
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
+    <script src="../version.js"></script>
     <script src="../assets/javascript/websocket.js"></script>
 
 <script>
-    var username = '<?php echo htmlspecialchars($_SESSION["username"]); ?>'
+    const username = '<?php echo htmlspecialchars($_SESSION["username"]); ?>'
 </script>
 </body>
 </html>

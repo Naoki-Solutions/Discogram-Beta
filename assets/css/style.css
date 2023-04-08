@@ -360,12 +360,13 @@ a {
 }
 
 .display-messages {
+    overflow-y: auto;
     border-radius: 5px;
-    border: 1px solid #191b20;
+    /*border: 1px solid #191b20;*/
     background-color: #282c34;
     position: absolute;
     width: 65rem;
-    height: 39rem;
+    height: 33rem;
     left: 0px;
     top: 20px;
     padding: 1px;
@@ -376,7 +377,7 @@ a {
 #messageBox {
     font-size: 17px;
     position: absolute;
-    top: 33rem;
+    top: 35rem;
     left: 10px;
     width:40rem;height:3rem;background-color:#353943;border-radius:5px;border:solid #353943 1px;color:gray;
 }
