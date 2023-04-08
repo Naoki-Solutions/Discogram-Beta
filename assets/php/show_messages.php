@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
         $message = '<b>' . $matches[1] . '</b>';
     }
     if (preg_match('/^`(.*)`$/', $message, $matches)) {
-        $message = '<span style="background-color: #242526; color: white;">' . $matches[1] . '</span>';
+        $message = '<span style="background-color: #242526; color:$color;">' . $matches[1] . '</span>';
     }
     echo "<p><strong><img id=\"noimg\" src=\"../assets/images/noimg.png\">" . htmlspecialchars($row["author"]). ":<br></strong><span style=\"color:$color;\"> " . $message . "</span></p>";
   }
@@ -47,4 +47,5 @@ echo '</label>';
 echo '</div>';
 echo "<script>var elem = document.getElementById('display-msg'); elem.scrollTop = elem.scrollHeight;</script>";
 $conn->close();
+
 ?>
