@@ -359,37 +359,15 @@ a {
     text-decoration: none;
 }
 
-.display-messages {
-    overflow-y: auto;
-    border-radius: 5px;
-    /*border: 1px solid #191b20;*/
-    background-color: #282c34;
+#message {
+    font-size: 17px;
     position: absolute;
-    width: 65rem;
-    height: 33rem;
-    left: 0px;
-    top: 20px;
-    padding: 1px;
-    font-family: sans-serif;
-    color: #848688;
+    top: 130px;
+    right: -38rem;
+    width:40rem;height:3rem;background-color:#353943;border-radius:5px;border:solid #353943 1px;color:gray;
 }
 
-#display-msg {
-    overflow-y: auto;
-    border-radius: 5px;
-    /*border: 1px solid #191b20;*/
-    background-color: #282c34;
-    position: absolute;
-    width: 65rem;
-    height: 33rem;
-    left: 0px;
-    top: 20px;
-    padding: 1px;
-    font-family: sans-serif;
-    color: #848688;
-}
-
-#messageBox::placeholder {
+#message::placeholder {
     font-size: 15px;
     padding-left: 10px;
 }
@@ -401,6 +379,22 @@ a {
     left: 20rem;
     top: 30rem;
     background-color: #282c34;
+}
+
+.display-msg {
+    overflow-y: auto;
+    border-radius: 5px;
+    /*border: 1px solid #191b20;*/
+    border-color: white;
+    background-color: #282c34;
+    position: absolute;
+    width: 70rem;
+    height: 33rem;
+    left: 0px;
+    top: 20px;
+    padding: 1px;
+    font-family: sans-serif;
+    color: #848688;
 }
 
 .display-msg p {

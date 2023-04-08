@@ -85,8 +85,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 </div>
 <div class="controls">
 <form action="../assets/php/submit_message.php" method="post">
-  <textarea id="message" name="message"></textarea>
-  <button id="submit" type="submit">Send Message</button>
+  <input type="text" id="message" name="message" placeholder="Enviar un mensaje a #General" required/>
+
 </form>
     </div>
     <script src="../version.js"></script>
