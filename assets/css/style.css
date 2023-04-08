@@ -383,6 +383,8 @@ a {
 
 .display-msg {
     overflow-y: auto;
+    scroll-behavior: auto;
+    scroll-behavior: smooth;
     border-radius: 5px;
     /*border: 1px solid #191b20;*/
     border-color: white;
