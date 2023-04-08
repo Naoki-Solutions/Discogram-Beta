@@ -41,3 +41,31 @@
     font-family: monospace;
     color: #848688;
 }
+
+.coso {
+    top: 23rem;
+    position: absolute;
+}
+
+.coso h2{
+    left: 20px;
+    position: absolute;
+    padding: 0;
+}
+
+.coso p{
+    left: 20px;
+    position: absolute;
+    margin: 0;
+}
+
+.coso h3{
+    left: 20px;
+    position: absolute;
+    margin: 0;
+    top: 0;
+}
+
+.coso p {
+    top: 40px;
+}

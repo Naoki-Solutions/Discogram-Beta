@@ -14,12 +14,22 @@ if ($conn->connect_error) {
 $sql = "SELECT author, message FROM messages ORDER BY timestamp ASC";
 $result = $conn->query($sql);
 
-echo '<div class="display-msg">';
+echo '<div class="display-msg" id="display-msg">';
 echo '<label>';
 
 if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {
-    $color = $row["author"] === "keyder" ? "#218de8" : "#848688";
+    switch($row["author"]) {
+    case "keyder":
+	$color = "#218de8";
+	break;
+    case "pina":
+	$color = "#fe0000";
+	break;
+    default:
+	$color = "#848688";
+	break;
+}
     echo "<p><strong>" . htmlspecialchars($row["author"]). ":<br></strong><span style=\"color:$color;\"> " . htmlspecialchars($row["message"]) . "</span></p>";
   }
 } else {
@@ -28,6 +38,6 @@ if ($result->num_rows > 0) {
 
 echo '</label>';
 echo '</div>';
-
+echo "<script>var elem = document.getElementById('display-msg'); elem.scrollTop = elem.scrollHeight;</script>";
 $conn->close();
 ?>
