@@ -20,17 +20,22 @@ echo '<label>';
 if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {
     switch($row["author"]) {
-    case "keyder":
-	$color = "#218de8";
-	break;
-    case "pina":
-	$color = "#fe0000";
-	break;
-    default:
-	$color = "#848688";
-	break;
-}
-    echo "<p><strong><img id=\"noimg\" src=\"../assets/images/noimg.png\">" . htmlspecialchars($row["author"]). ":<br></strong><span style=\"color:$color;\"> " . htmlspecialchars($row["message"]) . "</span></p>";
+      case "keyder":
+        $color = "#218de8";
+        break;
+      case "pina":
+        $color = "#fe0000";
+        break;
+      default:
+        $color = "#848688";
+        break;
+    }
+    $message = htmlspecialchars($row["message"]);
+    if (preg_match('/^\*\*(.*)\*\*$/', $message, $matches)) {
+        $message = '<b>' . $matches[1] . '</b>';
+    }
+
+    echo "<p><strong><img id=\"noimg\" src=\"../assets/images/noimg.png\">" . htmlspecialchars($row["author"]). ":<br></strong><span style=\"color:$color;\"> " . $message . "</span></p>";
   }
 } else {
   echo "<p>No messages found</p>";
