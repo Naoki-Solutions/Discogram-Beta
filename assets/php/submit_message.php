@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // Reemplaza estos valores con los detalles de tu propia base de datos
 $servername = "localhost";
 $username = "root";
@@ -11,20 +13,23 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT author, message FROM messages ORDER BY timestamp ASC";
-$result = $conn->query($sql);
+if (isset($_POST['message']) && isset($_SESSION['username'])) {
+  $author = $_SESSION['username'];
+  $message = $_POST['message'];
 
-echo '<div class="display-msg">';
+  $stmt = $conn->prepare("INSERT INTO messages (author, message) VALUES (?, ?)");
+  $stmt->bind_param("ss", $author, $message);
 
-if ($result->num_rows > 0) {
-  while ($row = $result->fetch_assoc()) {
-    echo "<p><strong>" . htmlspecialchars($row["author"]) . ":</strong> " . htmlspecialchars($row["message"]) . "</p>";
+  if ($stmt->execute()) {
+    echo "Message submitted successfully";
+  } else {
+    echo "Error: " . $stmt->error;
   }
-} else {
-  echo "No messages found";
-}
 
-echo '</div>';
+  $stmt->close();
+} else {
+  echo "Invalid request";
+}
 
 $conn->close();
 ?>
