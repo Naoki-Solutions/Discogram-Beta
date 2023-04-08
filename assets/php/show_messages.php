@@ -15,15 +15,18 @@ $sql = "SELECT author, message FROM messages ORDER BY timestamp ASC";
 $result = $conn->query($sql);
 
 echo '<div class="display-msg">';
+echo '<label>';
 
 if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {
-    echo "<p><strong>" . htmlspecialchars($row["author"]) . ":</strong> " . htmlspecialchars($row["message"]) . "</p>";
+    $color = $row["author"] === "keyder" ? "#218de8" : "#848688";
+    echo "<p><strong>" . htmlspecialchars($row["author"]). ":<br></strong><span style=\"color:$color;\"> " . htmlspecialchars($row["message"]) . "</span></p>";
   }
 } else {
   echo "<p>No messages found</p>";
 }
 
+echo '</label>';
 echo '</div>';
 
 $conn->close();

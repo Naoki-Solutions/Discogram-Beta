@@ -106,6 +106,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
     <script src="../version.js"></script>
     <script src="../assets/javascript/websocket.js"></script>
+<script>
+  document.getElementById("message").focus();
+</script>
 </body>
 
 </html>
