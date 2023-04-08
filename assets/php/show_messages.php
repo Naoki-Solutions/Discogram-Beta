@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 $sql = "SELECT author, message FROM messages ORDER BY timestamp ASC";
 $result = $conn->query($sql);
 
-echo '<div class="column-3">';
+echo '<div class="display-msg">';
 
 if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {

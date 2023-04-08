@@ -52,7 +52,7 @@ body {
     left: 17rem;
     top: 50px;
     width: 120rem;
-    height: 60rem;
+    height: 90rem;
     background-color: #282c34;
 }
 
@@ -374,12 +374,19 @@ a {
     color: #848688;
 }
 
-#messageBox {
-    font-size: 17px;
+#display-msg {
+    overflow-y: auto;
+    border-radius: 5px;
+    /*border: 1px solid #191b20;*/
+    background-color: #282c34;
     position: absolute;
-    top: 35rem;
-    left: 10px;
-    width:40rem;height:3rem;background-color:#353943;border-radius:5px;border:solid #353943 1px;color:gray;
+    width: 65rem;
+    height: 33rem;
+    left: 0px;
+    top: 20px;
+    padding: 1px;
+    font-family: sans-serif;
+    color: #848688;
 }
 
 #messageBox::placeholder {
@@ -394,4 +401,8 @@ a {
     left: 20rem;
     top: 30rem;
     background-color: #282c34;
+}
+
+.display-msg p {
+    padding-left: 10px;
 }
