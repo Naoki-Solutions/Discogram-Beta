@@ -78,6 +78,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <p style="left:42rem;top:70px">Buses: <span>1</span></p>
                 <p style="left:42rem;top:140px">Buses URL's</p>
                 <p style="left:42rem;top:160px"><span>ws://70.45.163.52:5200</span></p>
+                <p style="left:42rem;top:180px"><span>ws://70.45.163.52:5201</span></p>
             </div>
         </div>
     <script src="../version.js"></script>
