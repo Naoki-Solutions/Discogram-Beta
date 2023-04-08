@@ -66,11 +66,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <br>
             <br>
             <br>
-            <h2 style="color:red;padding-left:15px;padding-top:10px;margin:0">Zona de Peligro</h2>
-            <br>
             <h3 style="padding-left:15px;margin:0">Cerrar Sesion</h3>
             <p style="padding-left:15px;">Aqui podras cerrar la sesion y salir de tu cuenta.</p>
             <a href="../assets/php/logout.php"><button class="btn-logout" style="left:15px">Cerrar Sesion</button></a>
+            <h2 style="color:red;padding-left:15px;padding-top:50px;margin:0">Zona de Peligro</h2>
+            <p style="position:absolute;left:55rem;top:34rem;">Coded with ❣️ by Keyder<br> Copyright (c) 2023 NeticsSH<br>Beta <span id="version2"></span></p>
         </div>
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
