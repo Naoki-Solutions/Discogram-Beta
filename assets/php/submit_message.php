@@ -21,7 +21,9 @@ if (isset($_POST['message']) && isset($_SESSION['username'])) {
   $stmt->bind_param("ss", $author, $message);
 
   if ($stmt->execute()) {
-    echo "Message submitted successfully";
+    header('Location: ' . "../../content/cdp-general.php", true, 301);
+
+    exit();
   } else {
     echo "Error: " . $stmt->error;
   }
