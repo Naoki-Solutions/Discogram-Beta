@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
         $color = "#848688";
         break;
     }
-
+    
     
     $message = htmlspecialchars($row["message"]);
 
