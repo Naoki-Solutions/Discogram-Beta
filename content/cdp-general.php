@@ -102,7 +102,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </div>
     <div class="controls">
         <form action="../assets/php/submit_message.php" method="post">
-            <input type="text" id="message" name="message" placeholder="Enviar un mensaje a #General" required />
+            <input type="text" id="message" name="message" placeholder="Enviar un mensaje a #General" autocomplete="off" required/>
         </form>
         <div id="preview"></div>
     </div>

@@ -66,9 +66,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <br>
             <br>
             <br>
+            <h3 style="padding-left:15px;margin:1px;">Cambiar foto de perfil (pfp)</h3>
+            <p style="padding-left:15px;">Aqui, podras cambiar tu foto de perfil.<br>La imagen que subas no puede violar nuestros Terminos y Condiciones</p>
+            <input style="left:8.5rem;" id="btn-input" type="file" name="nueva_imagen"><br><br>
+		    <input style="top:21.7rem;left:1rem;" id="btn-input" type="submit" value="Guardar cambios">
+            <br>
+            <br>
+            <br>
             <h3 style="padding-left:15px;margin:0">Cerrar Sesion</h3>
             <p style="padding-left:15px;">Aqui podras cerrar la sesion y salir de tu cuenta.</p>
-            <a href="../assets/php/logout.php"><button class="btn-logout" style="left:15px">Cerrar Sesion</button></a>
+            <a href="../assets/php/logout.php"><button class="btn-debug" style="left:15px">Cerrar Sesion</button></a>
             <h2 style="color:red;padding-left:15px;padding-top:50px;margin:0">Zona de Peligro</h2>
             <p style="position:absolute;left:55rem;top:34rem;">Coded with ❣️ by Keyder<br> Copyright (c) 2023 NeticsSH<br>Beta <span id="version2"></span></p>
         </div>

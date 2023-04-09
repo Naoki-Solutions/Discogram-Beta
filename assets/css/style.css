@@ -290,6 +290,23 @@ h6 {
     background-color: #1e6aa1;
 }
 
+#btn-input {
+    border: solid #218ddc;
+    border-radius: 5px;
+    padding: 1px;
+    position: absolute;
+    background-color: #218ddc;
+}
+
+#btn-input:hover {
+    cursor: pointer;
+    border: solid #1e6aa1;
+    border-radius: 5px;
+    padding: 1px;
+    position: absolute;
+    background-color: #1e6aa1;
+}
+
 .btn-logout {
     border: solid red;
     border-radius: 5px;
