@@ -33,6 +33,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         left: 85px;
         font-size: 13px;
     }
+ 
 </style>
 
 <body>

@@ -37,6 +37,14 @@ if ($result->num_rows > 0) {
     $message = preg_replace('/`([^`]*)`/', '<span style="background-color: #333; color: $color; padding: 2px 4px; border-radius: 3px;">$1</span>', $message);
     // Convertir URLs en enlaces clicables
     $message = preg_replace('/(https?:\/\/[^\s]+)/', '<a href="$1" style="color: #2272d1;">$1</a>', $message);
+    if (substr($message, 0, 2) == "||" && substr($message, -2) == "||") {
+      // Sombrear/tapar el texto y añadir un evento onclick para mostrarlo
+      $message = '<span style="background-color: #1e1f22; color: #1e1f22; padding: 2px 4px; border-radius: 3px; cursor: pointer;" onclick="this.style.backgroundColor=\'#43454a\'; this.style.color=\'white\';">' . substr($message, 2, -2) . '</span>';
+    } else {
+      // Si el mensaje no empieza y termina por "||", mostrarlo normalmente
+      $message = '<span style="color: $color;">' . $message . '</span>';
+    }
+
     echo "<p><strong><img id=\"noimg\" src=\"../assets/images/noimg.png\">" . htmlspecialchars($row["author"]). ":<br></strong><span style=\"color:$color;\"> " . $message . "</span></p>";
   }
 } else {
