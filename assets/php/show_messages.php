@@ -30,7 +30,17 @@ if ($result->num_rows > 0) {
         $color = "#848688";
         break;
     }
+
+    
     $message = htmlspecialchars($row["message"]);
+
+    if (stripos($message, "#general") !== false) {
+      $message = str_ireplace("#general", '<a style="text-decoration:none;"href="./cdp-general.php">#general</a>', $message);
+    }
+
+    // Agregar estilo de fondo azul si el mensaje contiene "#General"
+    $message = str_ireplace("#General", '<span style="background-color: #3d4270; color: white; padding: 2px 4px; border-radius: 3px;">#general</span>', $message);
+
     // Reemplazar cualquier texto entre dos pares de asteriscos con una etiqueta de negrita
     $message = preg_replace('/\*\*(.*?)\*\*/', '<b>$1</b>', $message);
     // Reemplazar cualquier texto entre dos acentos graves con un fondo oscuro
@@ -47,9 +57,12 @@ if ($result->num_rows > 0) {
 
     echo "<p><strong><img id=\"noimg\" src=\"../assets/images/noimg.png\">" . htmlspecialchars($row["author"]). ":<br></strong><span style=\"color:$color;\"> " . $message . "</span></p>";
   }
+
 } else {
   echo "<p>No messages found</p>";
 }
+
+
 
 echo '</label>';
 echo '</div>';

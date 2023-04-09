@@ -582,3 +582,20 @@ a {
     margin: 0;
     top: 0;
 }
+
+.noperms {
+    background-color: #353943;
+    position: absolute;
+    width: 45rem;
+    height: 40px;
+    left: 20px;
+    top: 36rem;
+    border-radius: 5px;
+}
+
+.noperms p {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+}

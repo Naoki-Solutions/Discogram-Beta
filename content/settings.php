@@ -72,8 +72,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <br>
             <h3 style="padding-left:15px;margin:1px;">Cambiar foto de perfil (pfp)</h3>
             <p style="padding-left:15px;">Aqui, podras cambiar tu foto de perfil.<br>La imagen que subas no puede violar nuestros Terminos y Condiciones</p>
-            <input style="left:8.5rem;" id="btn-input" type="file" name="nueva_imagen"><br><br>
+            <form action="../assets/php/upload.php" method="post" enctype="multipart/form-data">
+            <input style="left:8.5rem;" id="btn-input" type="file" name="image"><br><br>
 		    <input style="top:21.7rem;left:1rem;" id="btn-input" type="submit" value="Guardar cambios">
+            </form>
             <br>
             <br>
             <br>
