@@ -599,3 +599,41 @@ a {
     left: 10px;
     margin: 0;
 }
+
+.column-4 span {
+    padding-left: 15px;
+    font-size: 15px;
+    color: #848688;
+    font-family: sans-serif;
+}
+
+#bot {
+    width: 25px;
+    position: absolute;
+    top: 34px;
+    left: 97px;
+}
+
+#dia {
+    width: 25px;
+    position: absolute;
+    top: 34px;
+    left: 20px;
+    border-radius: 10px;
+}
+
+#dia-p {
+    position: absolute;
+    top: 45px;
+    left: 50px;
+    font-size: 13px;
+}
+
+#online-wifi {
+    width: 15px;
+    position: absolute;
+    top: 50px;
+    left: 33px;
+    border-radius: 10px;
+    background-color: #21252b;
+}

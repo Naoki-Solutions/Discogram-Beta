@@ -107,8 +107,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div id="preview"></div>
     </div>
     <div class="column-4">
-        <h3 style="padding-left:40px">Reglas del Chat</h3>
-        <p style="padding-left:20px">- No cometarios racistas<br>- No temas politicos<br>- No temas sexuales<br>- No Spam</p>
+        <span>Bot ─ 1</span>
+        <img id="dia" src="../assets/images/dia.png"><img id="online-wifi" src="../assets/images/online.png"><h4 style="padding-left:50px;">Hikari</h4><img id="bot" src="../assets/images/bot.png">
+        <p id="dia-p">Type /help</p>
     </div>
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
