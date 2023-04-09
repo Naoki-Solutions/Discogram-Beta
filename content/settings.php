@@ -51,11 +51,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
     
         <div class="column-2-2">
-            <h4 style="top:1rem"><i class="fa-solid fa-circle-info"></i> Changelog</h4>
-            <h4 style="top:3rem"><i class="fa-solid fa-coins"></i> Tienda</h4>
-            <h3 style="top:6rem">Desarrollador</h3>
-            <h4 style="top:8rem"><i class="fa-solid fa-lock"></i> Academia</h4>
-            <h4 style="top:10rem"><i class="fa-solid fa-book"></i> Recursos</h4>
+            <h4 style="top:1rem"><i class="fa-solid fa-circle-info"></i> Ajustes de Cuenta</h4>
+            <h4 style="top:3rem"><i class="fa-solid fa-money-bill"></i> Facturacion</h4>
+            <h4 style="top:5rem"><i class="fa-solid fa-image"></i> Apariencia</h4>
+            <h4 style="top:7rem"><i class="fa-solid fa-book"></i> Recursos</h4>
+            <h4 style="top:9rem"><i class="fa-solid fa-wrench"></i> Herramientas</h4>
+            <h4 style="top:15rem"><i class="fa-solid fa-bug"></i> App Info</h4>
+            <h4 style="top:17rem"><i class="fa-solid fa-terminal"></i> Desarrolladores</h4>
+            <h4 style="top:19rem"><i class="fa-solid fa-book"></i> Terminos de Servicio</h4>
+            <h4 style="top:21rem"><i class="fa-solid fa-book"></i> Politica de Privacidad</h4>
         </div>
         <div class="column-3">
             <h2 style="padding-left:15px;padding-top:10px;">Ajustes / Settings</h2>
@@ -77,7 +81,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <p style="padding-left:15px;">Aqui podras cerrar la sesion y salir de tu cuenta.</p>
             <a href="../assets/php/logout.php"><button class="btn-debug" style="left:15px">Cerrar Sesion</button></a>
             <h2 style="color:red;padding-left:15px;padding-top:50px;margin:0">Zona de Peligro</h2>
-            <p style="position:absolute;left:55rem;top:34rem;">Coded with ❣️ by Keyder<br> Copyright (c) 2023 NeticsSH<br>Beta <span id="version2"></span></p>
+            <p style="position:absolute;left:55rem;top:34rem;">Coded with ❣️ by Keyder<br> Copyright (c) 2023 NeticsSH<br>Version <span id="version2"></span></p>
         </div>
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
