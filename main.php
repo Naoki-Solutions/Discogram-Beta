@@ -36,7 +36,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <span id="icons" style="left:10px;top:3.5rem;"><i class="fa-solid fa-compass"></i></span>
             <span id="icons" style="left:10px;top:6rem;"><i class="fa-solid fa-wrench"></i></span>
             <div class="circle">
-                <span style="left:8px;top:7px;" id="icons"><i class="fa-solid fa-plus"></i></span>
+            <span style="left:8px;top:7px;" id="icons"><i class="fa-solid fa-plus" onclick="openWindow()"></i></span>
             </div>
             <div class="circle-conf">
                 <a href="./content/settings.php"><span style="left:7px;top:7px;" id="icons"><i class="fa-solid fa-gear"></i></span></a>
@@ -67,9 +67,55 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <span id="span-members"><img id="gray-dot-img" src="./assets/images/gray-dot.png"> 0 miembros</span>
         </div>
 
-        </div>
-    <script src="version.js"></script>
-    <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
+    <div id="popup" class="popup">
+    <span class="close"><i onclick="closeWindow()" style="background-color:red;" class="fa-solid fa-xmark"></i></span>
+   <h3>Unirme a un Servidor</h3>
+   <p>Deseas unirte a un servidor? Pon el codigo de este aqui abajo</p>
+   <input>
+</div>
+
+</div>
+<script src="version.js"></script>
+<script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
+<script>
+function openWindow() {
+    document.getElementById("popup").style.display = "block";
+}
+
+function closeWindow() {
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+<script>
+    const popup = document.querySelector('.popup');
+const header = popup.querySelector('h3');
+
+let inicioX, inicioY, offsetX, offsetY;
+
+function iniciarArrastre(event) {
+  event.preventDefault();
+  inicioX = event.clientX;
+  inicioY = event.clientY;
+  offsetX = inicioX - parseFloat(getComputedStyle(popup).left);
+  offsetY = inicioY - parseFloat(getComputedStyle(popup).top);
+  document.addEventListener('mousemove', arrastrar);
+  document.addEventListener('mouseup', detenerArrastre);
+}
+
+function arrastrar(event) {
+  event.preventDefault();
+  popup.style.left = (event.clientX - offsetX) + 'px';
+  popup.style.top = (event.clientY - offsetY) + 'px';
+}
+
+function detenerArrastre(event) {
+  document.removeEventListener('mousemove', arrastrar);
+  document.removeEventListener('mouseup', detenerArrastre);
+}
+
+header.addEventListener('mousedown', iniciarArrastre);
+
+</script>
 </body>
 
 </html>

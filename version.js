@@ -1,5 +1,5 @@
-let version = "v1.0.0";
+let version = "1.0-beta";
 document.getElementById("version").innerHTML = version;
 
-let version2 = "v1.0.0";
+let version2 = "1.0-beta";
 document.getElementById("version2").innerHTML = version2;
