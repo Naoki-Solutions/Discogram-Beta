@@ -35,6 +35,8 @@ if ($result->num_rows > 0) {
     $message = preg_replace('/\*\*(.*?)\*\*/', '<b>$1</b>', $message);
     // Reemplazar cualquier texto entre dos acentos graves con un fondo oscuro
     $message = preg_replace('/`([^`]*)`/', '<span style="background-color: #333; color: $color; padding: 2px 4px; border-radius: 3px;">$1</span>', $message);
+    // Convertir URLs en enlaces clicables
+    $message = preg_replace('/(https?:\/\/[^\s]+)/', '<a href="$1" style="color: #2272d1;">$1</a>', $message);
     echo "<p><strong><img id=\"noimg\" src=\"../assets/images/noimg.png\">" . htmlspecialchars($row["author"]). ":<br></strong><span style=\"color:$color;\"> " . $message . "</span></p>";
   }
 } else {

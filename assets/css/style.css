@@ -488,3 +488,7 @@ a {
     width: 13rem;
     height: 14rem;
 }
+
+.display-msg a:hover {
+    text-decoration: underline;
+  }
