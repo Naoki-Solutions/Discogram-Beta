@@ -7,6 +7,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
     exit;
 }
+
+// if ($_SESSION["username"] !== "keyder") {
+//     header("location: ./assets/error/error.php");
+//     exit;
+// }
 ?>
 
 <!DOCTYPE html>
@@ -74,6 +79,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
    <h3>Unirme a un Servidor</h3>
    <p>Deseas unirte a un servidor? Pon el codigo de este aqui abajo</p>
    <input>
+   <button>Unirme al servidor</button>
+   <a onclick="openWindow2();closeWindow()">Crear un Servidor</a>
+</div>
+
+<div id="popup2" class="popup2">
+    <span class="close"><i onclick="closeWindow2()" style="background-color:red;" class="fa-solid fa-xmark"></i></span>
+   <h3>Crear un Servidor</h3>
+   <p>Para crear un servidor, debes de introducir el nombre que deseas para este en el campo de abajo</p>
+   <input>
+   <button>Unirme al servidor</button>
+   <a onclick="openWindow2()">Crear un Servidor</a>
 </div>
 
 </div>
@@ -90,6 +106,46 @@ function closeWindow() {
 </script>
 <script>
     const popup = document.querySelector('.popup');
+const header = popup.querySelector('h3');
+
+let inicioX, inicioY, offsetX, offsetY;
+
+function iniciarArrastre(event) {
+  event.preventDefault();
+  inicioX = event.clientX;
+  inicioY = event.clientY;
+  offsetX = inicioX - parseFloat(getComputedStyle(popup).left);
+  offsetY = inicioY - parseFloat(getComputedStyle(popup).top);
+  document.addEventListener('mousemove', arrastrar);
+  document.addEventListener('mouseup', detenerArrastre);
+}
+
+function arrastrar(event) {
+  event.preventDefault();
+  popup.style.left = (event.clientX - offsetX) + 'px';
+  popup.style.top = (event.clientY - offsetY) + 'px';
+}
+
+function detenerArrastre(event) {
+  document.removeEventListener('mousemove', arrastrar);
+  document.removeEventListener('mouseup', detenerArrastre);
+}
+
+header.addEventListener('mousedown', iniciarArrastre);
+
+</script>
+
+<script>
+function openWindow2() {
+    document.getElementById("popup2").style.display = "block";
+}
+
+function closeWindow2() {
+    document.getElementById("popup2").style.display = "none";
+}
+</script>
+<script>
+    const popup = document.querySelector('.popup2');
 const header = popup.querySelector('h3');
 
 let inicioX, inicioY, offsetX, offsetY;

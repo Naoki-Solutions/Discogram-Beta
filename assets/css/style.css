@@ -539,13 +539,44 @@ a {
     
 }
 
+.popup2 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+    padding: 20px;
+    display: none;
+    border-radius: 5px;
+    background-color: #282d35;
+    position: absolute;
+    width: 17rem;
+    height: 18rem;
+    left: 0;
+    top: 27rem;
+    padding: 1px;
+    font-family: monospace;
+    color: #848688;
+    
+}
+
 .popup input {
     background-color: #24282e;
     border: 1px solid #24282e;
     color: white;
     position: absolute;
-    left: 20px;
-    width: 11rem;
+    left: 15px;
+    width: 15rem;
+    height: 20px;
+}
+
+.popup2 input {
+    background-color: #24282e;
+    border: 1px solid #24282e;
+    color: white;
+    position: absolute;
+    left: 15px;
+    width: 15rem;
     height: 20px;
 }
 
@@ -553,6 +584,19 @@ a {
     margin: 10px;
     position: absolute;
     left: 10px;
+}
+
+.popup2 h3 {
+    margin: 10px;
+    position: absolute;
+    left: 10px;
+}
+
+.popup2 h3:hover {
+    margin: 10px;
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
 }
 
 .popup h3:hover {
@@ -573,6 +617,20 @@ a {
 }
 
 .popup i {
+    border-radius: 10px;
+}
+
+.popup2 p {
+    padding-left: 15px;
+    padding-top: 30px;
+}
+
+.popup2 span {
+    cursor: pointer;
+    float: right;
+}
+
+.popup2 i {
     border-radius: 10px;
 }
 
@@ -636,4 +694,72 @@ a {
     left: 33px;
     border-radius: 10px;
     background-color: #21252b;
+}
+
+.popup button {
+    position: absolute;
+    top: 8.5rem;
+    left: 140px;
+    background-color: #5865f2;
+    border-radius: 5px;
+    border: 1px solid #5865f2;
+}
+
+.popup button:hover {
+    position: absolute;
+    top: 8.5rem;
+    left: 140px;
+    background-color: #414cc5;
+    border-radius: 5px;
+    border: 1px solid #414cc5;
+}
+
+.popup2 button {
+    position: absolute;
+    top: 10rem;
+    left: 140px;
+    background-color: #5865f2;
+    border-radius: 5px;
+    border: 1px solid #5865f2;
+}
+
+.popup2 button:hover {
+    position: absolute;
+    top: 10rem;
+    left: 140px;
+    background-color: #414cc5;
+    border-radius: 5px;
+    border: 1px solid #414cc5;
+}
+
+.popup a {
+    left: 10px;
+    font-size: 15px;
+    position: absolute;
+    top: 8.5rem;
+}
+
+.popup a:hover {
+    left: 10px;
+    font-size: 15px;
+    position: absolute;
+    top: 8.5rem;
+    color: #5f6061;
+    cursor: pointer;
+}
+
+.popup2 a {
+    left: 10px;
+    font-size: 15px;
+    position: absolute;
+    top: 10rem;
+}
+
+.popup2 a:hover {
+    left: 10px;
+    font-size: 15px;
+    position: absolute;
+    top: 10rem;
+    color: #5f6061;
+    cursor: pointer;
 }
