@@ -763,3 +763,10 @@ a {
     color: #5f6061;
     cursor: pointer;
 }
+
+#noimg {
+    margin: 0;
+    width: 40px;
+    position: absolute;
+    left: 10px;
+}
