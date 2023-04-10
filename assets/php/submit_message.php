@@ -2,12 +2,7 @@
 session_start();
 
 // Reemplaza estos valores con los detalles de tu propia base de datos
-$servername = "localhost";
-$username = "root";
-$password = "ab3135c2@";
-$dbname = "discogram";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
+include('config.php');
 
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
