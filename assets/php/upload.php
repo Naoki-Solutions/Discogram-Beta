@@ -9,7 +9,7 @@ move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 $image_url = "./uploads/" . $target_file;
 
 // Conexión a la base de datos
-$conn = mysqli_connect("localhost", "root", "ab3135c2@", "login");
+$conn = mysqli_connect("localhost", "root", "ab3135c2@", "discogram");
 
 // Verificar conexión
 if (!$conn) {
