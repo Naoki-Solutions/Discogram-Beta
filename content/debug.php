@@ -12,7 +12,25 @@ if ($_SESSION["username"] !== "keyder") {
     header("location: ../assets/error/error.php");
     exit;
 }
+
+include('../assets/php/config.php');
+
 ?>
+
+<?php
+
+		// Consultar la última fila en la tabla "servers"
+		$sql = "SELECT server_id FROM servers ORDER BY server_id DESC LIMIT 1";
+		$resultado = $conn->query($sql);
+
+		// Si se encontró al menos una fila, mostrar el valor de la última columna
+		if ($resultado->num_rows > 0) {
+			$fila = $resultado->fetch_assoc();
+		} 
+
+		// Cerrar la conexión a la base de datos
+		$conn->close();
+	?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +85,7 @@ if ($_SESSION["username"] !== "keyder") {
                 <p style="left:10px;top:10px">Application Info</p>
                 <p style="left:10px;top:50px">IP: <span>70.45.163.52</span></p>
                 <p style="left:10px;top:70px">Version: <span id="version2"></span></p>
-                <p style="left:10px;top:90px">Bus URL: <span>ws://70.45.163.52:5200</span></p>
+                <p style="left:10px;top:90px">Bus URL: <span>none</span></p>
                 <p style="left:10px;top:110px">PHP Version: <span>8.2.0</span></p>
                 <p style="left:10px;top:140px">Server Info</p>
                 <p style="left:10px;top:160px">OS: <span>Ubuntu 20.04</span></p>
@@ -75,15 +93,16 @@ if ($_SESSION["username"] !== "keyder") {
                 <p style="left:22rem;top:10px">Database Info</p>
                 <p style="left:22rem;top:50px">Database Type: <span>MySQL / phpMyAdmin</span></p>
                 <p style="left:22rem;top:70px">Database Port: <span>3306</span></p>
-                <p style="left:22rem;top:90px">Database: <span>login</span></p>
-                <p style="left:22rem;top:110px">Tables: <span>4</span></p>
+                <p style="left:22rem;top:90px">Database: <span>discogram</span></p>
+                <p style="left:22rem;top:110px">Tables: <span>3</span></p>
+                <p style="left:22rem;top:170px">Ultimo Servidor: <?php echo $fila["server_id"]; ?></p>
                 <div class="line-debug-2"></div>
                 <p style="left:42rem;top:10px">Websocket Info</p>
                 <p style="left:42rem;top:50px">Node Version: <span>16.19.1</span></p>
                 <p style="left:42rem;top:70px">Buses: <span>1</span></p>
                 <p style="left:42rem;top:140px">Buses URL's</p>
-                <p style="left:42rem;top:160px"><span>ws://70.45.163.52:5200</span></p>
-                <p style="left:42rem;top:180px"><span>ws://70.45.163.52:5201</span></p>
+                <p style="left:42rem;top:160px"><span>none</span></p>
+                <p style="left:42rem;top:180px"><span>none</span></p>
             </div>
             <div class="abajo">
             <h2>Bases de Datos</h2>

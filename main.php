@@ -12,6 +12,22 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 //     header("location: ./assets/error/error.php");
 //     exit;
 // }
+
+// Get the server data from the database
+require_once "./assets/php/config.php";
+
+$server_id = $_GET["server_id"];
+$user_id = $_SESSION["id"];
+
+$stmt = $conn->prepare("SELECT * FROM servers WHERE id = ? AND user_id = ?");
+$stmt->bind_param("ii", $server_id, $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+$row = $result->fetch_assoc();
+$stmt->close();
+
+// If the user does not have a server with that ID, redirect to the main page
+
 ?>
 
 <!DOCTYPE html>
@@ -77,14 +93,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
    <a onclick="openWindow2();closeWindow()">Crear un Servidor</a>
 </div>
 
-<div id="popup2" class="popup2">
+<!-- <div id="popup2" class="popup2">
     <span class="close"><i onclick="closeWindow2()" style="background-color:red;" class="fa-solid fa-xmark"></i></span>
    <h3>Crear un Servidor</h3>
    <p>Para crear un servidor, debes de introducir el nombre que deseas para este en el campo de abajo</p>
-   <input>
-   <button>Unirme al servidor</button>
-   <a onclick="openWindow2()">Crear un Servidor</a>
-</div>
+   <form action="./assets/php/create-server.php" method="post">
+   <input type="text" id="server_name" name="server_name" required>
+   <button type="submit" name="crear_servidor">Crear Servidor</button>
+</form>
+</div> -->
 
 </div>
 <script src="version.js"></script>
