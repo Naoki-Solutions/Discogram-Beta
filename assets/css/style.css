@@ -12,6 +12,11 @@ body {
     overflow: hidden;
 }
 
+label {
+    font-family: sans-serif;
+    color: #848688;
+}
+
 .column {
     margin: 0;
     padding: 0;
@@ -770,3 +775,34 @@ a {
     position: absolute;
     left: 10px;
 }
+
+.input-settings {
+    position: absolute;
+    background-color: #21252b;
+    border: solid #21252b;
+    left: 1rem;
+    top: 11.5rem;
+    color: #848688;
+}
+
+.btn-changes {
+    color: white;
+    border: solid #248046;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    background-color: #248046;
+    left: 13rem;
+    top: 11.5rem;
+}
+
+.btn-changes:hover {
+    color: white;
+    cursor: pointer;
+    border: solid #1a6334;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    background-color: #1a6334;
+}
+
