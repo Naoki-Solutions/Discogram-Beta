@@ -28,6 +28,15 @@ label {
     background-color: #1c2025;
 }
 
+.column-3 li {
+    font-family: sans-serif;
+    color: #848688;
+}
+
+/* .column-3 h1,h2,h3,h4,h5,p,span {
+    padding-left: 15px;
+} */
+
 .column-2 {
     overflow: hidden;
     margin: 0;
@@ -804,5 +813,26 @@ a {
     padding: 5px;
     position: absolute;
     background-color: #1a6334;
+}
+
+.btn-danger {
+    color: white;
+    border: solid #da373c;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    background-color: #da373c;
+    left: 1rem;
+    top: 16rem;
+}
+
+.btn-danger:hover {
+    color: white;
+    cursor: pointer;
+    border: solid #b92d32;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    background-color: #b92d32;
 }
 

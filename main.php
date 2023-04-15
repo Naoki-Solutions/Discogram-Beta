@@ -49,7 +49,7 @@ $stmt->close();
         <div class="column">
             <a href="main.php"><span id="icons" style="left:10px;top:1rem;"><i class="fa-solid fa-house"></i></span></a>
             <span id="icons" style="left:10px;top:3.5rem;"><i class="fa-solid fa-compass"></i></span>
-            <span id="icons" style="left:10px;top:6rem;"><i class="fa-solid fa-wrench"></i></span>
+            <a href="./content/admin/panel.php"><span id="icons" style="left:10px;top:6rem;"><i class="fa-solid fa-wrench"></i></span></a>
             <div class="circle">
             <span style="left:8px;top:7px;" id="icons"><i class="fa-solid fa-plus" onclick="openWindow()"></i></span>
             </div>
@@ -64,13 +64,7 @@ $stmt->close();
             </div>
         </div>
     
-        <div class="column-2-2">
-            <h4 style="top:1rem"><i class="fa-solid fa-circle-info"></i> Changelog</h4>
-            <h4 style="top:3rem"><i class="fa-solid fa-coins"></i> Tienda</h4>
-            <h3 style="top:6rem">Desarrollador</h3>
-            <h4 style="top:8rem"><i class="fa-solid fa-lock"></i> Academia</h4>
-            <h4 style="top:10rem"><i class="fa-solid fa-book"></i> Recursos</h4>
-        </div>
+<?php include('./assets/php/components/2-2.php') ?>
         <div class="column-3">
 
         <div class="card">

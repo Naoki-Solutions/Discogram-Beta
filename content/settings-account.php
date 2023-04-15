@@ -52,7 +52,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <br>
             <label style="padding-left:15px;margin:1px;">Nuevo Usuario:</label>
             <input class="input-settings">
+            <br>
+            <h3 style="padding-left:15px;margin:1px;">Precaucion</h3>
             <button class="btn-changes">Guardar Cambios</button>
+            <button class="btn-danger">Eliminar Cuenta</button>
             <p style="position:absolute;left:55rem;top:34rem;">Coded with ❣️ by Keyder<br> Copyright (c) 2023 NeticsSH<br>Version <span id="version2"></span></p>
         </div>
     <script src="../version.js"></script>

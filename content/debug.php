@@ -7,13 +7,27 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     exit;
 }
 
-// Check if the user is authorized to access the debug page
-if ($_SESSION["username"] !== "keyder") {
-    header("location: ../assets/error/error.php");
-    exit;
-}
+// // Check if the user is authorized to access the debug page
+// if ($_SESSION["username"] !== "keyder") {
+//     header("location: ../assets/error/error.php");
+//     exit;
+// }
 
 include('../assets/php/config.php');
+
+$usuario = $_SESSION["username"];
+
+$resultado = mysqli_query($conn, "SELECT * FROM users WHERE username = '$usuario'");
+
+// Extrae el resultado de la consulta
+$usuario = mysqli_fetch_array($resultado);
+
+// Verifica si la columna "admin" es false o null
+if ($usuario["admin"] == false || $usuario["admin"] == null) {
+    // Redirecciona al usuario a una página de acceso denegado
+    header("Location: ../assets/error/error.php");
+    exit;
+}
 
 ?>
 
