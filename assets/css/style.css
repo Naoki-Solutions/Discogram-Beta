@@ -450,7 +450,7 @@ a {
     position: absolute;
     width: 56rem;
     height: 33rem;
-    left: 0px;
+    left: 0;
     top: 20px;
     padding: 1px;
     font-family: sans-serif;
@@ -475,7 +475,7 @@ a {
 }
 
 .display-msg p {
-    padding-left: 60px;
+    padding-left: 30px;
 }
 
 .column-4 {
@@ -537,15 +537,15 @@ a {
     padding: 0;
     position: absolute;
     transform: translate(-50%, -50%);
-    border: 1px solid white;
+    border: 1px solid black;
     padding: 20px;
     display: none;
     border-radius: 5px;
-    background-color: #282d35;
+    background-color: #21252b;
     position: absolute;
     width: 17rem;
     height: 18rem;
-    left: 0;
+    left: 20rem;
     top: 27rem;
     padding: 1px;
     font-family: monospace;
@@ -580,8 +580,10 @@ a {
     color: white;
     position: absolute;
     left: 15px;
+    top: 8rem;
     width: 15rem;
     height: 20px;
+    border-radius: 5px;
 }
 
 .popup2 input {
@@ -597,7 +599,7 @@ a {
 .popup h3 {
     margin: 10px;
     position: absolute;
-    left: 10px;
+    left: 20px;
 }
 
 .popup2 h3 {
@@ -616,13 +618,20 @@ a {
 .popup h3:hover {
     margin: 10px;
     position: absolute;
-    left: 10px;
+    left: 20px;;
     cursor: pointer;
 }
 
 .popup p {
     padding-left: 15px;
     padding-top: 30px;
+    font-size: 15px;
+    color: #57595e;
+}
+
+.popup label {
+    position: absolute;
+    left: 10px;
 }
 
 .popup span {
@@ -646,6 +655,14 @@ a {
 
 .popup2 i {
     border-radius: 10px;
+}
+
+.abajo-popup {
+    position: absolute;
+    background-color: #1c2025;
+    padding: 20px;
+    bottom: 0;
+    width: 232px;
 }
 
 .close {
@@ -712,20 +729,28 @@ a {
 
 .popup button {
     position: absolute;
-    top: 8.5rem;
-    left: 140px;
+    top: 5px;
+    left: 11.5rem;
     background-color: #5865f2;
-    border-radius: 5px;
     border: 1px solid #5865f2;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .popup button:hover {
     position: absolute;
-    top: 8.5rem;
-    left: 140px;
-    background-color: #414cc5;
+    top: 5px;
+    left: 11.5rem;
+    background-color: #4c57cc;
+    border: 1px solid #4c57cc;
+    color: white;
     border-radius: 5px;
-    border: 1px solid #414cc5;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .popup2 button {

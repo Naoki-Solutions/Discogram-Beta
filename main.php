@@ -80,11 +80,16 @@ $stmt->close();
 
     <div id="popup" class="popup">
     <span class="close"><i onclick="closeWindow()" style="background-color:red;" class="fa-solid fa-xmark"></i></span>
-   <h3>Unirme a un Servidor</h3>
-   <p>Deseas unirte a un servidor? Pon el codigo de este aqui abajo</p>
-   <input>
-   <button>Unirme al servidor</button>
-   <a onclick="openWindow2();closeWindow()">Crear un Servidor</a>
+   <h3>Unete a una comunidad</h3>
+   <p>Introduce un token de invitacion para unirte a una comunidad existente</p>
+    <label>Token de Invitacion</label>
+   <input placeholder="Y6zk3vA87F">
+   <p style="position:absolute;top:120px">Estos tokens estan compuestos de numeros y letras con un total de 10 caracteres, por ejemplo:</p>
+   <!-- <button>Unirme al servidor</button>
+   <a onclick="openWindow2();closeWindow()">Crear un Servidor</a> -->
+   <div class="abajo-popup">
+    <button>Unirse</button>
+   </div>
 </div>
 
 <!-- <div id="popup2" class="popup2">

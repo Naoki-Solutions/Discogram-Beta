@@ -16,7 +16,7 @@ if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {
     switch($row["author"]) {
       case "keyder":
-        $color = "#218de8";
+        $color = "#848688";
         break;
       case "pina":
         $color = "#fe0000";
@@ -49,8 +49,13 @@ if ($result->num_rows > 0) {
       // Si el mensaje no empieza y termina por "||", mostrarlo normalmente
       $message = '<span style="color: $color;">' . $message . '</span>';
     }
-
-    echo "<p><strong><img id=\"noimg\" src=\"../assets/images/noimg.png\">" . htmlspecialchars($row["author"]). ":<br></strong><span style=\"color:$color;\"> " . $message . "</span></p>";
+    $author = htmlspecialchars($row["author"]);
+    if ($author === "keyder") {
+      $author_label = '<span style="color:red">Owner</span> ' . $author;
+    } else {
+      $author_label = $author;
+    }
+    echo "<p><strong>" . $author_label . ":<br></strong><span style=\"color:$color;\"> " . $message . "</span></p>";
   }
 
 } else {
