@@ -8,16 +8,14 @@ Esta aplicacion web es muy facil e intuitiva de usar. Te creas una cuenta, y tie
 Discogram usa para el servicio de mensajes Websockets, que esta basado en Nodejs. Para el front-end, utilizamos html, css y php. Ya en back-end, usamos una database MySQL para guardar las credenciales de los usuarios
 
 ## TO-DO:
-    - [X] More source organization (separate systems (Console system, future Time system) on different files
-    - [ ] Add a time system (working on it)
-    - [ ] Add support to non-main class.
-    - [ ] Code explanation in README.md
-    - [ ] Documentation
-    - [ ] Logo
-    - [ ] NPM Package 
-    - [ ] Web: rang playground 
+    - [ ] Terminar el sistema de creacion de servidores
+    - [ ] Poder ponerse una foto de perfil
+    - [ ] Poder unirse a servidores
+    - [ ] Hacer el apartado de changelog
+    - [ ] Hacer la consola de desarrolladores
+    - [ ] Poder manejar todos los usuarios desde el panel (Hacerlos Admin, etc)
 
-    - [ ] **FIRST RELEASE**
+    - [ ] **Lanzar Discogram**
 
 ## Requerimientos
 - Websockets (In Node.js)
