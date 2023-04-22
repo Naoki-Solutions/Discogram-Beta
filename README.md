@@ -4,8 +4,8 @@ Esta es una aplicacion web basada en la UI de Discord con la finalidad de crear 
 ## Utilidad
 Esta aplicacion web es muy facil e intuitiva de usar. Te creas una cuenta, y tienes comunidades a tu disposicion.
 
-## Como funciona?
-Discogram usa para el servicio de mensajes Websockets, que esta basado en Nodejs. Para el front-end, utilizamos html, css y php. Ya en back-end, usamos una database MySQL para guardar las credenciales de los usuarios
+## ¿Como funciona?
+Discogram para el back-end solo utiliza php y MySQL. Los usuarios y los mensajes de los servidores se almacenan en una misma base de datos. 
 
 ## TO-DO:
     - [ ] Terminar el sistema de creacion de servidores
@@ -18,7 +18,7 @@ Discogram usa para el servicio de mensajes Websockets, que esta basado en Nodejs
     - [ ] **Lanzar Discogram**
 
 ## Requerimientos
-- Websockets (In Node.js)
-- Una base de datos MySQL
+- PHP 8.1 o Superior
+- MySQL
 
 # Como desplegar
