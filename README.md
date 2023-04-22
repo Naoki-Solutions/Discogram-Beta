@@ -7,6 +7,18 @@ Esta aplicacion web es muy facil e intuitiva de usar. Te creas una cuenta, y tie
 ## Como funciona?
 Discogram usa para el servicio de mensajes Websockets, que esta basado en Nodejs. Para el front-end, utilizamos html, css y php. Ya en back-end, usamos una database MySQL para guardar las credenciales de los usuarios
 
+## TO-DO:
+    - [X] More source organization (separate systems (Console system, future Time system) on different files
+    - [ ] Add a time system (working on it)
+    - [ ] Add support to non-main class.
+    - [ ] Code explanation in README.md
+    - [ ] Documentation
+    - [ ] Logo
+    - [ ] NPM Package 
+    - [ ] Web: rang playground 
+
+    - [ ] **FIRST RELEASE**
+
 ## Requerimientos
 - Websockets (In Node.js)
 - Una base de datos MySQL
