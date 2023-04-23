@@ -11,7 +11,7 @@ Discogram para el back-end solo utiliza php y MySQL. Los usuarios y los mensajes
     - [ ] Terminar el sistema de creacion de servidores
     - [ ] Poder ponerse una foto de perfil
     - [ ] Poder unirse a servidores
-    - [ ] Hacer el apartado de changelog
+    - [X] Hacer el apartado de changelog
     - [ ] Hacer la consola de desarrolladores
     - [ ] Poder manejar todos los usuarios desde el panel (Hacerlos Admin, etc)
 
@@ -21,4 +21,6 @@ Discogram para el back-end solo utiliza php y MySQL. Los usuarios y los mensajes
 - PHP 8.1 o Superior
 - MySQL
 
-# Como desplegar
+## Como desplegar
+
+### Paso 1 - Descargue el .zip del repositorio
