@@ -23,4 +23,4 @@ Discogram para el back-end solo utiliza php y MySQL. Los usuarios y los mensajes
 
 ## Como desplegar
 
-### Paso 1 - Descargue el .zip del repositorio
+- Descargue el .zip del repositorio
