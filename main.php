@@ -43,6 +43,8 @@ $stmt->close();
             <div class="location" style="left:24rem"><a style="color:green">Home</a></div>
             <div class="version"><a id="version" style="color:yellow"></a></div>
             <div class="pixeles"><a style="color:#218de8">70 REM</a></div>
+            <div class="location" style="left:73rem;top:12px;"><a style="color:#218de8"><i class="fa-solid fa-circle-info" onclick="infoOpen();"></i></a></div>
+            <div class="location" style="left:75.2rem;top:10px;"><a style="color:#218de8">🎟️ 0</a></div>
             <div class="location" style="left:78rem;top:10px;"><a style="color:white"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></div>
             <div class="location" style="left:82rem;top:10px;"><a href="./assets/php/logout.php" style="color:red">Salir</a></div>
         </div>
@@ -51,7 +53,7 @@ $stmt->close();
             <span id="icons" style="left:10px;top:3.5rem;"><i class="fa-solid fa-compass"></i></span>
             <a href="./content/admin/panel.php"><span id="icons" style="left:10px;top:6rem;"><i class="fa-solid fa-wrench"></i></span></a>
             <div class="circle">
-            <span style="left:8px;top:7px;" id="icons"><i class="fa-solid fa-plus" onclick="openWindow()"></i></span>
+            <span style="left:8px;top:7px;" id="icons"><i class="fa-solid fa-plus" onclick="openWindow();"></i></span>
             </div>
             <div class="circle-conf">
                 <a href="./content/settings.php"><span style="left:7px;top:7px;" id="icons"><i class="fa-solid fa-gear"></i></span></a>
@@ -76,7 +78,15 @@ $stmt->close();
             <span id="span-members"><img id="gray-dot-img" src="./assets/images/gray-dot.png"> 0 miembros</span>
         </div>
     
-        
+    <div id="infoWindow" class="infoWindow">
+    <div class="infoWindowNav">
+        <label><i class="fa-solid fa-cube"></i> Propiedades</label>
+        <span id="minimizeInfo"><i class="fa-solid fa-window-minimize"></i></span>
+        <span id="expandInfo"><i class="fa-regular fa-window-restore"></i></span>
+        <span id="closeInfoX"><i class="fa-solid fa-x" onclick="infoClose()"></i></span>
+    </div>
+    <!-- <div class="infoWindowNavVertical"></div> -->
+</div>
 
     <div id="popup" class="popup">
     <span class="close"><i onclick="closeWindow()" style="background-color:red;" class="fa-solid fa-xmark"></i></span>
@@ -115,7 +125,7 @@ function closeWindow() {
 }
 </script>
 <script>
-    const popup = document.querySelector('.popup');
+const popup = document.querySelector('.popup');
 const header = popup.querySelector('h3');
 
 let inicioX, inicioY, offsetX, offsetY;
@@ -155,7 +165,7 @@ function closeWindow2() {
 }
 </script>
 <script>
-    const popup = document.querySelector('.popup2');
+const popup = document.querySelector('.popup2');
 const header = popup.querySelector('h3');
 
 let inicioX, inicioY, offsetX, offsetY;
@@ -184,8 +194,65 @@ function detenerArrastre(event) {
 header.addEventListener('mousedown', iniciarArrastre);
 
 </script>
-</body>
 
+
+
+
+
+
+
+
+<script>
+function infoOpen() {
+    document.getElementById("infoWindow").style.display = "block";
+}
+
+function infoClose() {
+    document.getElementById("infoWindow").style.display = "none";
+}
+</script>
+
+
+
+
+<script>
+const infoWindow = document.querySelector('.infoWindow');
+const header = infoWindow.querySelector('label');
+
+let inicioX, inicioY, offsetX, offsetY;
+
+function iniciarArrastre(event) {
+  event.preventDefault();
+  inicioX = event.clientX;
+  inicioY = event.clientY;
+  offsetX = inicioX - parseFloat(getComputedStyle(popup).left);
+  offsetY = inicioY - parseFloat(getComputedStyle(popup).top);
+  document.addEventListener('mousemove', arrastrar);
+  document.addEventListener('mouseup', detenerArrastre);
+}
+
+function arrastrar(event) {
+  event.preventDefault();
+  popup.style.left = (event.clientX - offsetX) + 'px';
+  popup.style.top = (event.clientY - offsetY) + 'px';
+}
+
+function detenerArrastre(event) {
+  document.removeEventListener('mousemove', arrastrar);
+  document.removeEventListener('mouseup', detenerArrastre);
+}
+
+header.addEventListener('mousedown', iniciarArrastre);
+
+</script>
+
+
+
+
+
+
+
+</body>
 </html>
 
 <!--        <div class="column-vertical"></div>-->

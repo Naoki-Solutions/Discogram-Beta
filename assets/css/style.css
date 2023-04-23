@@ -549,8 +549,7 @@ a {
     top: 27rem;
     padding: 1px;
     font-family: monospace;
-    color: #848688;
-    
+    color: #848688; 
 }
 
 .popup2 {
@@ -861,3 +860,62 @@ a {
     background-color: #b92d32;
 }
 
+.infoWindow {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    padding: 20px;
+    display: none;
+    border-radius: 5px;
+    background-color: #21252b;
+    position: absolute;
+    width: 27rem;
+    height: 20rem;
+    left: 45rem;
+    top: 25rem;
+    padding: 1px;
+    font-family: monospace;
+    color: #848688; 
+}
+
+.infoWindowNav {
+    position: absolute;
+    background-color: #1c2025;
+    top: 0;
+    width: 27rem;   
+    height: 25px;
+}
+
+.infoWindowNav label {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#closeInfoX {
+    position: absolute;
+    left: 25.7rem;
+    top: 5px;
+}
+
+#expandinfo {
+    position: absolute;
+    left: 24rem;
+    top: 5px;
+}
+
+#minimizeinfo {
+    position: absolute;
+    left: 22.5rem;
+    top: 5px;
+}
+
+.infoWindowNavVertical {
+    position: absolute;
+    background-color: #282c34;
+    width: 150px;
+    height: 296px;
+    top: 25px;
+}
