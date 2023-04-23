@@ -28,33 +28,35 @@ Discogram para el back-end solo utiliza php y MySQL. Los usuarios y los mensajes
 - Inicie Apache y MySQL
 
 **phpMyAdmin**
-- CREATE DATABASE discogram;
-- 
-- use discogram;
-- 
-- CREATE TABLE users (
--     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
--     username VARCHAR(50) NOT NULL UNIQUE,
--     password VARCHAR(255) NOT NULL,
--     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-- );
-- 
-- 
-- CREATE TABLE messages (
--   id INT AUTO_INCREMENT PRIMARY KEY,
--   author VARCHAR(255) NOT NULL,
--   message TEXT NOT NULL,
--   timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-- );
-- 
-- 
-- CREATE TABLE servers (
--   id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
--   server_id VARCHAR(255) NOT NULL,
--   user_id VARCHAR(255) NOT NULL,
--   server_name VARCHAR(255) NOT NULL
-- );
-- 
-- ALTER TABLE users ADD admin TINYINT;
-- 
-- ALTER TABLE users ADD tokens INT;
+```sql
+CREATE DATABASE discogram;
+
+use discogram;
+
+CREATE TABLE users (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE messages (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  author VARCHAR(255) NOT NULL,
+  message TEXT NOT NULL,
+  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE servers (
+  id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  server_id VARCHAR(255) NOT NULL,
+  user_id VARCHAR(255) NOT NULL,
+  server_name VARCHAR(255) NOT NULL
+);
+
+ALTER TABLE users ADD admin TINYINT;
+
+ALTER TABLE users ADD tokens INT;
+```
