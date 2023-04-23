@@ -28,6 +28,7 @@ Discogram para el back-end solo utiliza php y MySQL. Los usuarios y los mensajes
 - Inicie Apache y MySQL
 
 **phpMyAdmin**
+Ejecute el siguiente MySQL Query dentro de phpMyAdmin
 ```sql
 CREATE DATABASE discogram;
 
