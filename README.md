@@ -22,5 +22,7 @@ Discogram para el back-end solo utiliza php y MySQL. Los usuarios y los mensajes
 - MySQL
 
 ## Como desplegar
-
+### LocalHost
 - Descargue el .zip del repositorio
+- El contenido pongalo en C:/xampp/htdocs
+- Inicie Apache y MySQL
