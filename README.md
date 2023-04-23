@@ -60,3 +60,18 @@ ALTER TABLE users ADD admin TINYINT;
 
 ALTER TABLE users ADD tokens INT;
 ```
+
+**config.php (./assets/php/config.php)**
+
+```php
+define('servername', 'localhost');
+define('username', 'root');
+define('password', ''); // De tener una contraseña para el usuario pongala aqui
+define('dbname', 'discogram');
+ 
+$conn = mysqli_connect(servername, username, password, dbname);
+ 
+if($conn === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+```
