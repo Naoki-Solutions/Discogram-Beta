@@ -846,8 +846,9 @@ a {
     padding: 5px;
     position: absolute;
     background-color: #da373c;
-    left: 1rem;
-    top: 16rem;
+    /* left: 1rem;
+    top: 16rem; */
+    margin-left: 25px;
 }
 
 .btn-danger:hover {

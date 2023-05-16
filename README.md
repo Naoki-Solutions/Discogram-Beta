@@ -17,6 +17,13 @@ Discogram para el back-end solo utiliza php y MySQL. Los usuarios y los mensajes
 
     - [ ] **Lanzar Discogram**
 
+## Changelog:
+```
+v1.2.0 Beta
+
+[+] 
+```
+
 ## Requerimientos
 - PHP 8.1 o Superior
 - MySQL

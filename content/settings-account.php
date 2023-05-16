@@ -47,15 +47,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class="column-3">
             <h2 style="padding-left:15px;padding-top:10px;">Account Settings</h2>
             <br>
-            <h3 style="padding-left:15px;margin:1px;">Cambiar Usuario</h3>
-            <p style="padding-left:15px;margin:1px;">Aqui podras cambiar el nombre de usuario de tu cuenta.</p>
             <br>
-            <label style="padding-left:15px;margin:1px;">Nuevo Usuario:</label>
-            <input class="input-settings">
             <br>
-            <h3 style="padding-left:15px;margin:1px;">Precaucion</h3>
-            <button class="btn-changes">Guardar Cambios</button>
-            <button class="btn-danger">Eliminar Cuenta</button>
+            <div class="buttons"><button class="btn-danger">Eliminar Cuenta</button><button class="btn-danger">Eliminar Cuenta</button><button class="btn-danger">Eliminar Cuenta</button></div>
             <p style="position:absolute;left:55rem;top:34rem;">Coded with ❣️ by Keyder<br> Copyright (c) 2023 NeticsSH<br>Version <span id="version2"></span></p>
         </div>
     <script src="../version.js"></script>

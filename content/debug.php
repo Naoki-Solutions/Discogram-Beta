@@ -72,7 +72,7 @@ if ($usuario["admin"] == false || $usuario["admin"] == null) {
         <div class="column">
             <a href="../main.php"><span id="icons" style="left:10px;top:1rem;"><i class="fa-solid fa-house"></i></span></a>
             <span id="icons" style="left:10px;top:3.5rem;"><i class="fa-solid fa-compass"></i></span>
-            <span id="icons" style="left:10px;top:6rem;"><i class="fa-solid fa-wrench"></i></span>
+            <a href="./admin/panel.php"><span id="icons" style="left:10px;top:6rem;"><i class="fa-solid fa-wrench"></i></span></a>
             <div class="circle">
                 <span style="left:8px;top:7px;" id="icons"><i class="fa-solid fa-plus"></i></span>
             </div>

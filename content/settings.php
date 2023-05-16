@@ -28,7 +28,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class="column">
             <a href="../main.php"><span id="icons" style="left:10px;top:1rem;"><i class="fa-solid fa-house"></i></span></a>
             <span id="icons" style="left:10px;top:3.5rem;"><i class="fa-solid fa-compass"></i></span>
-            <span id="icons" style="left:10px;top:6rem;"><i class="fa-solid fa-wrench"></i></span>
+            <a href="./admin/panel.php"><span id="icons" style="left:10px;top:6rem;"><i class="fa-solid fa-wrench"></i></span></a>
             <div class="circle">
                 <span style="left:8px;top:7px;" id="icons"><i class="fa-solid fa-plus"></i></span>
             </div>
@@ -45,20 +45,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     
         <?php include('../assets/php/components/settings-column.php') ?>
         <div class="column-3">
-            <h2 style="padding-left:15px;padding-top:10px;">Ajustes / Settings</h2>
+            <!-- <h2 style="padding-left:15px;padding-top:10px;">Ajustes - Settings</h2>
             <br>
-            <h3 style="padding-left:15px;margin:1px;">Debug Panel</h3>
-            <p style="padding-left:15px;">Aqui, podras observar el panel de depuracion de Discogram.<br>Podras encontrar informacion del Back-End.</p>
-            <a href="debug.php"><button class="btn-debug" style="left:15px">Ir al Panel de Depuracion</button></a>
             <br>
             <br>
             <br>
             <h3 style="padding-left:15px;margin:1px;">Cambiar foto de perfil (pfp)</h3>
-            <p style="padding-left:15px;">Aqui, podras cambiar tu foto de perfil.<br>La imagen que subas no puede violar nuestros Terminos y Condiciones</p>
-            <form action="../assets/php/upload.php" method="post" enctype="multipart/form-data">
+            <p style="padding-left:15px;">Aqui, podras cambiar tu foto de perfil.<br>La imagen que subas no puede violar nuestros Terminos y Condiciones</p> -->
+            <!-- <form action="../assets/php/upload.php" method="post" enctype="multipart/form-data">
             <input style="left:8.5rem;" id="btn-input" type="file" name="image"><br><br>
 		    <input style="top:21.7rem;left:1rem;" id="btn-input" type="submit" value="Guardar cambios">
-            </form>
+            </form> -->
             <br>
             <br>
             <br>
