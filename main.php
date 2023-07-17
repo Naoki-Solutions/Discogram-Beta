@@ -36,17 +36,17 @@ $stmt->close();
 <?php include('./assets/php/components/head.php');?>
 
 <body>
+<div class="loader">
+    <h1>Cargando...</h1>
+  </div>
         <div class="column-vertical">
             <img style="width:50px;" src="./assets/images/logo.png">
             <input placeholder="Buscar">
             <div class="some-div"><a style="color:#218de8">Discogram Beta</a></div>
-            <div class="location" style="left:24rem"><a style="color:green">Home</a></div>
             <div class="version"><a id="version" style="color:yellow"></a></div>
-            <div class="pixeles"><a style="color:#218de8">70 REM</a></div>
-            <div class="location" style="left:73rem;top:12px;"><a style="color:#218de8"><i class="fa-solid fa-circle-info" onclick="infoOpen();"></i></a></div>
-            <div class="location" style="left:75.2rem;top:10px;"><a style="color:#218de8">🎟️ 0</a></div>
-            <div class="location" style="left:78rem;top:10px;"><a style="color:white"><?php echo htmlspecialchars($_SESSION["username"]); ?></a></div>
-            <div class="location" style="left:82rem;top:10px;"><a href="./assets/php/logout.php" style="color:red">Salir</a></div>
+            <div class="pixeles">Logged in as: <?php echo htmlspecialchars($_SESSION["username"]); ?></div>
+            <div class="ping"></div>
+            <div class="location" style="left:43rem;top:12px;"><a style="color:#218de8"><i class="fa-solid fa-circle-info" onclick="infoOpen();"></i></a></div>
         </div>
         <div class="column">
             <a href="main.php"><span id="icons" style="left:10px;top:1rem;"><i class="fa-solid fa-house"></i></span></a>
@@ -75,7 +75,16 @@ $stmt->close();
             <img id="verified-img-card" src="./assets/images/verified.png">
             <h4 id="card-text-id">El Culto del Pan</h4>
             <p id="card-p-id">En este grupo alabamos el pan,<br>¿Porque? ¯\_(ツ)_/¯</p>
-            <span id="span-members"><img id="gray-dot-img" src="./assets/images/gray-dot.png"> 0 miembros</span>
+            <span id="span-members"><img id="gray-dot-img" src="./assets/images/gray-dot.png"> 0 miembros</span><a><span id="span-entrar">Entrar</span></a>
+        </div>
+
+        <div class="card2">
+        <img id="banner" src="./assets/images/room.jpeg">
+            <div class="square2"><img id="imgbread" src="./assets/images/brain.jpeg"></div>
+            <img id="verified-img-card" src="./assets/images/verified.png">
+            <h4 id="card-text-id">El Rincon Depresivo</h4>
+            <p id="card-p-id">Solo entra y desahogate.</p>
+            <span id="span-members"><img id="gray-dot-img" src="./assets/images/gray-dot.png"> 0 miembros</span><span id="span-members"><img id="gray-dot-img" src="./assets/images/gray-dot.png"> 0 miembros</span><a><span id="span-entrar">Entrar</span></a>
         </div>
     
     <div id="infoWindow" class="infoWindow">
@@ -115,144 +124,13 @@ $stmt->close();
 </div>
 <script src="version.js"></script>
 <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
-<script>
-function openWindow() {
-    document.getElementById("popup").style.display = "block";
-}
-
-function closeWindow() {
-    document.getElementById("popup").style.display = "none";
-}
-</script>
-<script>
-const popup = document.querySelector('.popup');
-const header = popup.querySelector('h3');
-
-let inicioX, inicioY, offsetX, offsetY;
-
-function iniciarArrastre(event) {
-  event.preventDefault();
-  inicioX = event.clientX;
-  inicioY = event.clientY;
-  offsetX = inicioX - parseFloat(getComputedStyle(popup).left);
-  offsetY = inicioY - parseFloat(getComputedStyle(popup).top);
-  document.addEventListener('mousemove', arrastrar);
-  document.addEventListener('mouseup', detenerArrastre);
-}
-
-function arrastrar(event) {
-  event.preventDefault();
-  popup.style.left = (event.clientX - offsetX) + 'px';
-  popup.style.top = (event.clientY - offsetY) + 'px';
-}
-
-function detenerArrastre(event) {
-  document.removeEventListener('mousemove', arrastrar);
-  document.removeEventListener('mouseup', detenerArrastre);
-}
-
-header.addEventListener('mousedown', iniciarArrastre);
-
-</script>
-
-<script>
-function openWindow2() {
-    document.getElementById("popup2").style.display = "block";
-}
-
-function closeWindow2() {
-    document.getElementById("popup2").style.display = "none";
-}
-</script>
-<script>
-const popup = document.querySelector('.popup2');
-const header = popup.querySelector('h3');
-
-let inicioX, inicioY, offsetX, offsetY;
-
-function iniciarArrastre(event) {
-  event.preventDefault();
-  inicioX = event.clientX;
-  inicioY = event.clientY;
-  offsetX = inicioX - parseFloat(getComputedStyle(popup).left);
-  offsetY = inicioY - parseFloat(getComputedStyle(popup).top);
-  document.addEventListener('mousemove', arrastrar);
-  document.addEventListener('mouseup', detenerArrastre);
-}
-
-function arrastrar(event) {
-  event.preventDefault();
-  popup.style.left = (event.clientX - offsetX) + 'px';
-  popup.style.top = (event.clientY - offsetY) + 'px';
-}
-
-function detenerArrastre(event) {
-  document.removeEventListener('mousemove', arrastrar);
-  document.removeEventListener('mouseup', detenerArrastre);
-}
-
-header.addEventListener('mousedown', iniciarArrastre);
-
-</script>
-
-
-
-
-
-
-
-
-<script>
-function infoOpen() {
-    document.getElementById("infoWindow").style.display = "block";
-}
-
-function infoClose() {
-    document.getElementById("infoWindow").style.display = "none";
-}
-</script>
-
-
-
-
-<script>
-const infoWindow = document.querySelector('.infoWindow');
-const header = infoWindow.querySelector('label');
-
-let inicioX, inicioY, offsetX, offsetY;
-
-function iniciarArrastre(event) {
-  event.preventDefault();
-  inicioX = event.clientX;
-  inicioY = event.clientY;
-  offsetX = inicioX - parseFloat(getComputedStyle(popup).left);
-  offsetY = inicioY - parseFloat(getComputedStyle(popup).top);
-  document.addEventListener('mousemove', arrastrar);
-  document.addEventListener('mouseup', detenerArrastre);
-}
-
-function arrastrar(event) {
-  event.preventDefault();
-  popup.style.left = (event.clientX - offsetX) + 'px';
-  popup.style.top = (event.clientY - offsetY) + 'px';
-}
-
-function detenerArrastre(event) {
-  document.removeEventListener('mousemove', arrastrar);
-  document.removeEventListener('mouseup', detenerArrastre);
-}
-
-header.addEventListener('mousedown', iniciarArrastre);
-
-</script>
-
-
-
-
-
-
+<script src="./assets/javascript/popup.js"></script>
+<script src="./assets/javascript/popup-2.js"></script>
+<script src="./assets/javascript/popup2.js"></script>
+<script src="./assets/javascript/popup2-2.js"></script>
+<script src="./assets/javascript/ping.js"></script>
+<script src="./assets/javascript.popup3.js"></script>
+<script src="./assets/javascript.popup3-2.js"></script>
 
 </body>
 </html>
-
-<!--        <div class="column-vertical"></div>-->

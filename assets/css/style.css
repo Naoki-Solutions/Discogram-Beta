@@ -236,12 +236,26 @@ label {
 
 .pixeles {
     font-size: 13px;
+    font-family: sans-serif;
     border-radius: 5px;
     padding: 1px;
     position: absolute;
     background-color: #21252b;
     border: solid #21252b;
-    left: 31.5rem;
+    left: 29rem;
+    top: 12px;
+    color: #848688;
+}
+
+.ping {
+    font-size: 13px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    padding: 1px;
+    position: absolute;
+    background-color: #21252b;
+    border: solid #21252b;
+    left: 37.5rem;
     top: 12px;
     color: #848688;
 }
@@ -265,7 +279,7 @@ label {
     position: absolute;
     background-color: #21252b;
     border: solid #21252b;
-    left: 27.5rem;
+    left: 24rem;
     top: 12px;
     color: #848688;
 }
@@ -355,6 +369,19 @@ h6 {
     color: #848688;
 }
 
+.card2 {
+    border-radius: 5px;
+    background-color: #21252b;
+    position: absolute;
+    width: 17rem;
+    height: 18rem;
+    left: 310px;
+    top: 20px;
+    padding: 1px;
+    font-family: monospace;
+    color: #848688;
+}
+
 .square {
     width: 40px;
     height: 40px;
@@ -365,6 +392,18 @@ h6 {
     background-color: #21252b;
     border-radius: 8px;
 }
+
+.square2 {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 7rem;
+    padding: 1px;
+    left: 10px;
+    background-color: #21252b;
+    border-radius: 8px;
+}
+
 
 #banner {
     width: 17rem;
@@ -399,6 +438,15 @@ h6 {
 #span-members {
     position: absolute;
     left: 10px;
+    top: 15.8rem;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+#span-entrar {
+    color: green;
+    position: absolute;
+    left: 190px;
     top: 15.8rem;
     font-size: 15px;
     font-family: sans-serif;
@@ -920,3 +968,17 @@ a {
     height: 296px;
     top: 25px;
 }
+
+.prof {
+    font-family: sans-serif;
+    color: white;
+    background-color: #1c2025;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50rem;
+    width: 220px;
+    height: 100px;
+}
+  
+  
