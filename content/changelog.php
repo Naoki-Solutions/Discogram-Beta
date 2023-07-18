@@ -53,27 +53,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <h2 style="padding-left:15px;padding-top:10px;">Changelog</h2>
             <p style="padding-left:15px;">Última actualización: <span style="color:yellow">?/?/2023 - <a id="version2" style="color:yellow"></a></span></p>
             <p style="padding-left:15px;">
-            [+] Se cambio la top navbar en las paginas faltantes
-            <br>
-            [+] Se agrego la funcion de poder arrastrar la ventana "Propiedades"
-            <br>
-            [+] Se cambiaron algunos colores dentro de la aplicacion
-            <br>
-            [+] Se agrego la fecha y hora al mandar un mensaje
-            <br>
-            [+] Se volvio a agregar la "columna 4" en los chats
-            <br>
-            [+] Se agrego una pantalla de carga
-            <br>
-            [+] Se ajustaron los tamaños de los divs en los chats
-            <br>
-            [+] Se corrigio un error con los canales en los grupos
-            <br>
-            [+] Se agrego el menu al hacer click derecho sobre los canales
-            <br>
-            [+] Se agrego la funcion de poder establecer un estado (En linea, ausente, no molestar)
-            <br>
-            [-] Se removio "cdp-console.php"
             </p>
         </div>
     <script src="../version.js"></script>
