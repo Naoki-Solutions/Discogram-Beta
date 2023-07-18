@@ -66,7 +66,7 @@ CREATE TABLE servers (
 
 ALTER TABLE users ADD admin TINYINT;
 
-ALTER TABLE users ADD tokens INT;
+ALTER TABLE users ADD status VARCHAR(255);
 ```
 
 **config.php (./assets/php/config.php)**

@@ -29,19 +29,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 </style>
 
 <body>
-    <div class="column-vertical">
-        <img style="width:50px;" src="../assets/images/logo.png">
-        <input placeholder="Buscar">
-        <div class="some-div"><a style="color:#218de8">Discogram Beta</a></div>
-        <div class="location" style="left:24rem"><a style="color:green">Home</a></div>
-        <div class="version"><a id="version" style="color:yellow"></a></div>
-        <div class="pixeles"><a style="color:#218de8">70 REM</a></div>
-        <div class="location" style="left:78rem;top:10px;"><a style="color:white">
-                <?php echo htmlspecialchars($_SESSION["username"]); ?>
-            </a></div>
-        <div class="location" style="left:82rem;top:10px;"><a href="../assets/php/logout.php"
-                style="color:red">Salir</a></div>
-    </div>
+<div class="column-vertical">
+            <img style="width:50px;" src="../assets/images/logo.png"> 
+            <input placeholder="Buscar">
+            <div class="some-div"><a style="color:#218de8">Discogram Beta</a></div>
+            <div class="version"><a id="version" style="color:yellow"></a></div>
+            <div class="pixeles">Logged in as: <?php echo htmlspecialchars($_SESSION["username"]); ?></div>
+            <div class="ping"></div>
+            <div class="location" style="left:43rem;top:12px;"><a style="color:#218de8"><i class="fa-solid fa-circle-info" onclick="infoOpen();"></i></a></div>
+        </div>
     <div class="column">
         <a href="../main.php"><span id="icons" style="left:10px;top:1rem;"><i class="fa-solid fa-house"></i></span></a>
         <span id="icons" style="left:10px;top:3.5rem;"><i class="fa-solid fa-compass"></i></span>
@@ -77,12 +73,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 NeticsSH</h4>
             <h4 style="padding-left:11px;font-weight:200">📢 Announcements</h4>
             <h4 style="padding-left:11px;font-weight:200">💡 Suggestions</h4>
-            <h4 style="padding-left:11px;font-weight:200">🪲 Bug report</h4>
-            <a href="https://github.com/Naoki-Solutions"><h4 style="padding-left:11px;font-weight:200"><i style="padding-left:3px" class="fa-brands fa-github"></i> Github</h4></a>
-            <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i> Etc</h4>
+            <h4 style="padding-left:11px;font-weight:200">🐛 Bug report</h4>
+            <a href="https://github.com/Naoki-Solutions"><h4 style="padding-left:13px;font-weight:200"><i style="padding-left:3px" class="fa-brands fa-github"></i> Github</h4></a>
+            <!-- <h4 style="font-size:13px;font-weight:200"><i style="font-size:13px;" class="fa-solid fa-chevron-down"></i> Etc</h4>
             <a href="./cdp-console.php">
                 <h4 style="padding-left:11px;font-weight:200"><i class="fa-solid fa-terminal"></i> Console</h4>
-            </a>
+            </a> -->
         </div>
     </div>
     <div class="fill-line"></div>
@@ -96,7 +92,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <form action="../assets/php/submit_message.php" method="post">
             <input type="text" id="message" name="message" placeholder="Enviar un mensaje a #General" autocomplete="off" required/>
         </form>
-        <div id="preview"></div>
     </div>
     <div class="column-4">
         <span>Bot ─ 1</span>
@@ -105,12 +100,31 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </div>
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.3/dist/index.min.js"></script>
     <script src="../version.js"></script>
-    <script src="../assets/javascript/websocket.js"></script>
 <script>
 window.onload = function() {
   document.getElementById("message").focus();
 }
+</script>
+<script>
+    function getLatency() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var latency = xhr.responseText;
+                document.querySelector('.ping').innerHTML = 'Ping: ' + latency + ' ms';
+            }
+        };
+        xhr.open('GET', '../assets/php/ping.php', true);
+        xhr.send();
+    }
+
+    // Llamar a getLatency() una vez para mostrar la latencia al cargar la página
+    getLatency();
+
+    // Actualizar la latencia cada 5 segundos
+    setInterval(getLatency, 5000); // 5000 milisegundos = 5 segundos
 </script>
 </body>
 </html>

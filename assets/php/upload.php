@@ -1,28 +1,45 @@
 <?php
+// Establecer la conexión a la base de datos
+$servername = "localhost"; // Cambia esto si tu servidor de base de datos es diferente
+$username = "root";
+$password = "ab3135c2@";
+$dbname = "discogram";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Error de conexión a la base de datos: " . $conn->connect_error);
+}
+
 session_start();
-$username = $_SESSION["username"];
 
-$target_dir = "uploads/";
+// Obtener los datos del archivo subido
+$target_dir = "pfp/"; // Directorio donde se almacenarán las imágenes (debe tener permisos de escritura)
 $target_file = $target_dir . basename($_FILES["image"]["name"]);
-move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-$image_url = "./uploads/" . $target_file;
-
-// Conexión a la base de datos
-$conn = mysqli_connect("localhost", "root", "ab3135c2@", "discogram");
-
-// Verificar conexión
-if (!$conn) {
-    die("Error de conexión: " . mysqli_connect_error());
+// Verificar si el archivo subido es una imagen
+$check = getimagesize($_FILES["image"]["tmp_name"]);
+if ($check === false) {
+    die("El archivo seleccionado no es una imagen válida.");
 }
 
-// Actualizar registro de usuario con la ruta de la imagen
-$sql = "UPDATE users SET image_url='$image_url' WHERE username='$username'";
-if (mysqli_query($conn, $sql)) {
-    echo "Imagen de perfil actualizada exitosamente.";
+// Mover el archivo al directorio de imágenes
+if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+    // Actualizar la ruta de la foto de perfil en la base de datos
+    $username = $_SESSION["username"]; // Obtener el nombre de usuario de la sesión actual
+    $profile_picture = $target_file;
+
+    $sql = "UPDATE users SET profile_picture='$profile_picture' WHERE username='$username'";
+
+    if ($conn->query($sql) === true) {
+        echo "La foto de perfil se ha actualizado correctamente.";
+    } else {
+        echo "Error al actualizar la foto de perfil: " . $conn->error;
+    }
 } else {
-    echo "Error al actualizar la imagen de perfil: " . mysqli_error($conn);
+    echo "Error al subir el archivo de imagen.";
 }
 
-mysqli_close($conn);
+$conn->close();
 ?>

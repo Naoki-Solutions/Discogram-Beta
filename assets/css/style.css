@@ -89,7 +89,7 @@ label {
     top: 50px;
     width: 120rem;
     height: 90rem;
-    background-color: #282c34;
+    background-color: #24282e;
 }
 
 .column-vertical {
@@ -256,6 +256,19 @@ label {
     background-color: #21252b;
     border: solid #21252b;
     left: 37.5rem;
+    top: 12px;
+    color: #848688;
+}
+
+.status {
+    font-size: 13px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    padding: 1px;
+    position: absolute;
+    background-color: #21252b;
+    border: solid #21252b;
+    left: 45rem;
     top: 12px;
     color: #848688;
 }
@@ -463,9 +476,9 @@ a {
 #message {
     font-size: 17px;
     position: absolute;
-    top: 130px;
-    right: -38rem;
-    width: 40rem;
+    top: 370px;
+    right: -66rem;
+    width: 68rem;
     height: 3rem;
     background-color: #353943;
     border-radius: 5px;
@@ -494,10 +507,10 @@ a {
     border-radius: 5px;
     /*border: 1px solid #191b20;*/
     border-color: white;
-    background-color: #282c34;
+    background-color: #24282e;
     position: absolute;
-    width: 56rem;
-    height: 33rem;
+    width: 71rem;
+    height: 45rem;
     left: 0;
     top: 20px;
     padding: 1px;
@@ -516,7 +529,7 @@ a {
 }
 
 .display-msg::-webkit-scrollbar-thumb {
-    background-color: #7289da;
+    background-color: #1a1b1e;
     /* Color del thumb */
     border-radius: 5px;
     /* Radio de borde del thumb */
@@ -530,10 +543,10 @@ a {
     margin: 0;
     padding: 0;
     position: absolute;
-    left: 73rem;
+    left: 88rem;
     top: 50px;
     width: 20rem;
-    height: 45rem;
+    height: 60rem;
     background-color: #21252b;
 }
 
@@ -980,5 +993,24 @@ a {
     width: 220px;
     height: 100px;
 }
+
+.status-div {
+    display: none;
+    border-radius: 5px;
+    background-color: #21252b;
+    position: absolute;
+    width: 17rem;
+    height: 7rem;
+    left: 28rem;
+    padding: 1px;
+    font-family: monospace;
+    color: #848688;
+}
+
+.status-div p:hover {
+    cursor: pointer;
+    color: #686b6c
+}
+
   
   

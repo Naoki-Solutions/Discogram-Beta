@@ -19,12 +19,31 @@ require_once "./assets/php/config.php";
 $server_id = $_GET["server_id"];
 $user_id = $_SESSION["id"];
 
-$stmt = $conn->prepare("SELECT * FROM servers WHERE id = ? AND user_id = ?");
-$stmt->bind_param("ii", $server_id, $user_id);
+// ...
+
+$stmt = $conn->prepare("SELECT * FROM users WHERE id = ?");
+$stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
 $row = $result->fetch_assoc();
 $stmt->close();
+
+$status = $row["status"]; // Obtener el valor de la columna "status" desde la tabla "users"
+
+// ...
+
+
+if ($status == "online") {
+    $statusImage = "./assets/status/online.png";
+} elseif ($status == "idle") {
+    $statusImage = "./assets/status/idle.png";
+} elseif ($status == "dnd") {
+    $statusImage = "./assets/status/dnd.png";
+} else {
+    $statusImage = "./assets/status/offline.png"; // Puedes proporcionar una imagen para cuando el estado no sea "online", "idle" o "dnd"
+}
+
+
 
 // If the user does not have a server with that ID, redirect to the main page
 
@@ -36,9 +55,6 @@ $stmt->close();
 <?php include('./assets/php/components/head.php');?>
 
 <body>
-<div class="loader">
-    <h1>Cargando...</h1>
-  </div>
         <div class="column-vertical">
             <img style="width:50px;" src="./assets/images/logo.png">
             <input placeholder="Buscar">
@@ -47,6 +63,8 @@ $stmt->close();
             <div class="pixeles">Logged in as: <?php echo htmlspecialchars($_SESSION["username"]); ?></div>
             <div class="ping"></div>
             <div class="location" style="left:43rem;top:12px;"><a style="color:#218de8"><i class="fa-solid fa-circle-info" onclick="infoOpen();"></i></a></div>
+            <div class="status"><img style="width: 12px; height: 12px;" src="<?php echo $statusImage; ?>" onclick="openStatus();"></div>
+
         </div>
         <div class="column">
             <a href="main.php"><span id="icons" style="left:10px;top:1rem;"><i class="fa-solid fa-house"></i></span></a>
@@ -86,15 +104,23 @@ $stmt->close();
             <p id="card-p-id">Solo entra y desahogate.</p>
             <span id="span-members"><img id="gray-dot-img" src="./assets/images/gray-dot.png"> 0 miembros</span><span id="span-members"><img id="gray-dot-img" src="./assets/images/gray-dot.png"> 0 miembros</span><a><span id="span-entrar">Entrar</span></a>
         </div>
+        <div id="status-div" class="status-div">
+        <span class="close"><i onclick="closeStatus()" style="background-color:red;" class="fa-solid fa-xmark"></i></span>
+        <p style="font-size:15px;margin-left:5px" onclick="updateStatus('online')"><img style="width: 12px; height: 12px;" src="assets/status/online.png"> En linea</p>
+        <p style="font-size:15px;margin-left:5px" onclick="updateStatus('idle')"><img style="width: 12px; height: 12px;" src="assets/status/idle.png"> Ausente</p>
+        <p style="font-size:15px;margin-left:5px" onclick="updateStatus('dnd')"><img style="width: 12px; height: 12px;" src="assets/status/dnd.png"> No molestar</p>
+        </div>
     
+
     <div id="infoWindow" class="infoWindow">
-    <div class="infoWindowNav">
-        <label><i class="fa-solid fa-cube"></i> Propiedades</label>
-        <span id="minimizeInfo"><i class="fa-solid fa-window-minimize"></i></span>
-        <span id="expandInfo"><i class="fa-regular fa-window-restore"></i></span>
-        <span id="closeInfoX"><i class="fa-solid fa-x" onclick="infoClose()"></i></span>
-    </div>
-    <!-- <div class="infoWindowNavVertical"></div> -->
+    <div id="infoWindowNav" class="infoWindowNav">
+    <label><i class="fa-solid fa-cube"></i> Propiedades</label>
+    <span id="minimizeInfo"><i class="fa-solid fa-window-minimize"></i></span>
+    <span id="expandInfo"><i class="fa-regular fa-window-restore"></i></span>
+    <span id="closeInfoX"><i class="fa-solid fa-x" onclick="infoClose()"></i></span>
+  </div>
+
+  <!-- <div class="infoWindowNavVertical"></div> -->
 </div>
 
     <div id="popup" class="popup">
@@ -121,6 +147,7 @@ $stmt->close();
 </form>
 </div> -->
 
+
 </div>
 <script src="version.js"></script>
 <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
@@ -129,8 +156,78 @@ $stmt->close();
 <script src="./assets/javascript/popup2.js"></script>
 <script src="./assets/javascript/popup2-2.js"></script>
 <script src="./assets/javascript/ping.js"></script>
-<script src="./assets/javascript.popup3.js"></script>
-<script src="./assets/javascript.popup3-2.js"></script>
+<script src="./assets/javascript/loader.js"></script>
+
+<script>
+    function infoOpen() {
+    document.getElementById("infoWindow").style.display = "block";
+}
+
+function infoClose() {
+    document.getElementById("infoWindow").style.display = "none";
+}
+</script>
+
+<script>
+    function openStatus() {
+    document.getElementById("status-div").style.display = "block";
+}
+
+function closeStatus() {
+    document.getElementById("status-div").style.display = "none";
+}
+</script>
+
+<script>
+    // Obtener el elemento de la ventana o div
+var infoWindow = document.getElementById("infoWindow");
+
+// Variables para almacenar la posición inicial del ratón y la ventana
+var initialMouseX, initialMouseY, initialWindowX, initialWindowY;
+
+// Función para iniciar el arrastre de la ventana
+function startDragging(e) {
+  // Obtener la posición inicial del ratón
+  initialMouseX = e.clientX;
+  initialMouseY = e.clientY;
+
+  // Obtener la posición inicial de la ventana
+  var windowRect = infoWindow.getBoundingClientRect();
+  initialWindowX = windowRect.left;
+  initialWindowY = windowRect.top;
+
+  // Agregar los eventos de arrastre y soltar
+  document.addEventListener("mousemove", dragWindow);
+  document.addEventListener("mouseup", stopDragging);
+}
+
+// Función para arrastrar la ventana
+function dragWindow(e) {
+  // Calcular la cantidad de movimiento del ratón
+  var deltaX = e.clientX - initialMouseX;
+  var deltaY = e.clientY - initialMouseY;
+
+  // Calcular y establecer la nueva posición de la ventana
+  infoWindow.style.left = initialWindowX + deltaX + "px";
+  infoWindow.style.top = initialWindowY + deltaY + "px";
+}
+
+// Función para detener el arrastre de la ventana
+function stopDragging() {
+  // Quitar los eventos de arrastre y soltar
+  document.removeEventListener("mousemove", dragWindow);
+  document.removeEventListener("mouseup", stopDragging);
+}
+
+// Agregar el evento de inicio de arrastre a la barra de navegación de la ventana
+var infoWindowNav = document.getElementById("infoWindowNav");
+infoWindowNav.addEventListener("mousedown", startDragging);
+
+</script>
+
+<script src="./assets/javascript/update_status.js"></script>
+
+
 
 </body>
 </html>
