@@ -9,7 +9,7 @@ Discogram para el back-end solo utiliza php y MySQL. Los usuarios y los mensajes
 
 ## TO-DO:
     - [ ] Terminar el sistema de creacion de servidores
-    - [ ] Poder ponerse una foto de perfil
+    - [X] Poder ponerse una foto de perfil
     - [ ] Poder unirse a servidores
     - [X] Hacer el apartado de changelog
     - [ ] Hacer la consola de desarrolladores
@@ -39,35 +39,33 @@ v1.2.0 Beta
 ```sql
 CREATE DATABASE discogram;
 
-use discogram;
+USE discogram;
 
 CREATE TABLE users (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    profile_picture VARCHAR(255) NOT NULL,
+    profile_picture MEDIUMBLOB NOT NULL,
+    admin TINYINT NOT NULL, -- Corregido "TINIYINT" a "TINYINT"
+    status VARCHAR(255) NOT NULL -- Eliminado la coma después de la última columna
 );
-
 
 CREATE TABLE messages (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  author VARCHAR(255) NOT NULL,
-  message TEXT NOT NULL,
-  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    author VARCHAR(255) NOT NULL,
+    message TEXT NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
 
 CREATE TABLE servers (
-  id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  server_id VARCHAR(255) NOT NULL,
-  user_id VARCHAR(255) NOT NULL,
-  server_name VARCHAR(255) NOT NULL,
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    server_id VARCHAR(255) NOT NULL,
+    user_id VARCHAR(255) NOT NULL,
+    server_name VARCHAR(255) NOT NULL
 );
 
-ALTER TABLE users ADD admin TINYINT;
 
-ALTER TABLE users ADD status VARCHAR(255);
 ```
 
 **config.php (./assets/php/config.php)**

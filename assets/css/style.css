@@ -486,6 +486,10 @@ a {
     color: gray;
 }
 
+#message {
+    outline: none;
+}
+
 #message::placeholder {
     font-size: 15px;
     padding-left: 10px;
@@ -735,10 +739,10 @@ a {
 .noperms {
     background-color: #353943;
     position: absolute;
-    width: 45rem;
+    width: 65rem;
     height: 40px;
     left: 20px;
-    top: 36rem;
+    top: 50rem;
     border-radius: 5px;
 }
 

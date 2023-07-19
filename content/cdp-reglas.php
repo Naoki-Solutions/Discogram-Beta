@@ -75,6 +75,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <p style="padding-left:15px;">- Prohibido el spam<br>- Prohibido hablar de temas sexuales, politicos o gore.<br>- Prohiba la discriminacion<br>- No causar drama innecesariamente<br>- No hablar o mandar cosas ilegales<br>- No compartir informacion privada</p>
             <div class="noperms"><p>No tienes permisos para mandar mensajes en este canal.</p></div>
         </div>
+        <div class="column-4">
+        <span>Bot ─ 1</span>
+        <img id="dia" src="../assets/images/dia.png"><img id="online-wifi" src="../assets/images/online.png"><h4 style="padding-left:50px;">Hikari</h4><img id="bot" src="../assets/images/bot.png">
+        <p id="dia-p">Type /help</p>
+    </div>
     <script src="../version.js"></script>
     <script src="https://kit.fontawesome.com/c27ee28938.js" crossorigin="anonymous"></script>
     <script>

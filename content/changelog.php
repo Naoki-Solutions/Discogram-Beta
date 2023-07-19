@@ -51,8 +51,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
         <div class="column-3">
             <h2 style="padding-left:15px;padding-top:10px;">Changelog</h2>
-            <p style="padding-left:15px;">Última actualización: <span style="color:yellow">?/?/2023 - <a id="version2" style="color:yellow"></a></span></p>
+            <p style="padding-left:15px;">Última actualización: <span style="color:yellow">19/7/2023 - <a id="version2" style="color:yellow"></a></span></p>
             <p style="padding-left:15px;">
+            [+] Se hicieron cambios en el canal de las reglas del culto del pan
+            <br>
+            <a style="color:#5BDF3E">[+] Se agrego la funcionalidad de las fotos de perfil</a>
+            <br>
+            [+] Cambios en los ajustes
             </p>
         </div>
     <script src="../version.js"></script>
